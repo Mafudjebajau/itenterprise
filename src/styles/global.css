@@ -1,0 +1,240 @@
+:root {
+  /* Cores Primárias - Harmonia Vermelho/Preto */
+  --vermelho-primario: #E53935;
+  --vermelho-escuro: #C62828;
+  --vermelho-suave: #EF5350;
+  
+  /* Cores Neutras - Escala Harmonizada */
+  --preto: #121212;
+  --preto-claro: #1E1E1E;
+  --preto-suave: #2D2D2D;
+  --cinza-escuro: #424242;
+  --cinza-medio: #616161;
+  --cinza: #9E9E9E;
+  --cinza-claro: #E0E0E0;
+  --branco: #FFFFFF;
+  
+  /* Cores de Fundo */
+  --bg-escuro: #0A0A0A;
+  --bg-card: #1A1A1A;
+  --bg-hover: rgba(229, 57, 53, 0.05);
+  
+  /* Gradientes Harmonizados */
+  --gradient-vermelho: linear-gradient(135deg, var(--vermelho-primario), var(--vermelho-escuro));
+  --gradient-preto: linear-gradient(135deg, var(--preto), var(--preto-claro));
+  --gradient-hero: linear-gradient(135deg, var(--preto) 0%, var(--preto-claro) 100%);
+  --gradient-overlay: linear-gradient(135deg, rgba(18, 18, 18, 0.9), rgba(30, 30, 30, 0.8));
+}
+.black {
+  color: var(--preto) !important;
+}
+.danger{
+  color: var(--vermelho-primario) !important;
+}
+
+
+@font-face {
+    font-family: vampire-wars;
+    src: url("../assets/fonts/aero/Aero.ttf") format("truetype");
+}
+
+.font {
+    font-family: vampire-wars;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--branco);
+  background-color: var(--preto);
+  overflow-x: hidden;
+}
+
+/* Container Responsivo */
+.container {
+  max-width: 80vw;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Botões Harmonizados */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+  font-size: 0.9rem;
+  gap: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.btn-primary {
+  background: var(--gradient-vermelho);
+  color: var(--branco);
+  box-shadow: 0 4px 15px rgba(229, 57, 53, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(229, 57, 53, 0.4);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--branco);
+  border: 2px solid var(--branco);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-outline::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-preto);
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.btn-outline:hover::after {
+  left: 0;
+}
+
+.btn-outline:hover {
+  color: var(--branco);
+  border-color: transparent;
+  transform: translateY(-2px);
+}
+
+/* Seções */
+.section {
+  padding: 100px 0;
+  position: relative;
+  border-top: 1px solid red;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.section-title h2 {
+  font-size: 3rem;
+  color: var(--branco);
+  margin-bottom: 20px;
+  position: relative;
+  font-weight: 700;
+}
+
+.section-title h2::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: var(--gradient-vermelho);
+  border-radius: 2px;
+}
+
+.section-title p {
+  color: var(--cinza);
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Responsividade Geral */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 1000px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 80px 0;
+  }
+  
+  .section-title {
+    margin-bottom: 60px;
+  }
+  
+  .section-title h2 {
+    font-size: 2.5rem;
+  }
+  
+  .section-title p {
+    font-size: 1.1rem;
+  }
+  
+  .container {
+    padding: 0 15px;
+  }
+  
+  .btn {
+    padding: 12px 24px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 60px 0;
+  }
+  
+  .section-title h2 {
+    font-size: 2rem;
+  }
+  
+  .section-title p {
+    font-size: 1rem;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.8rem;
+    width: 100%;
+    max-width: 280px;
+  }
+}
