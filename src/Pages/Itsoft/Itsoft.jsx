@@ -3,6 +3,7 @@ import './Itsoft.css'
 import { FaClock, FaCloud, FaComputer, FaEnvelope, FaLock, FaPhone, FaRocket, FaShield, FaWhatsapp } from 'react-icons/fa6'
 import { FaWifi } from 'react-icons/fa'
 import HeaderItsoft from '../../components/Header/HeaderItsoft'
+import itsoftEquipe from '../../assets/it-team.webp'
 
 const Itsoft = () => {
     const [servicoAtivo, setServicoAtivo] = useState(0)
@@ -232,7 +233,7 @@ const Itsoft = () => {
                         </div>
                         <div className="sobre-imagem">
                             <img
-                                src="src/assets/it-team.webp"
+                                src={itsoftEquipe}
                                 alt="Equipe ITSOFT" />
                         </div>
                     </div>
