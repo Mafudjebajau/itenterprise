@@ -63,7 +63,7 @@ const Servicos = () => {
                   <li key={idx} className="servico-item">
                     <div className="servico-info">
                       <h4>{servico.nome}</h4>
-                      <p>{servico.descricao}</p>
+                      <p className='black'>{servico.descricao}</p>
 
                     </div>
                     <div className="servico-dot"></div>

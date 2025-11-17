@@ -149,6 +149,7 @@ body {
   padding: 100px 0;
   position: relative;
   border-top: 1px solid red;
+  padding: 2rem 0 !important;
 }
 
 .section-title {
@@ -220,7 +221,7 @@ body {
 
 @media (max-width: 480px) {
   .section {
-    padding: 60px 0;
+    padding: 60px 20px;
   }
   
   .section-title h2 {

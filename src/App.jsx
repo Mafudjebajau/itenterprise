@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Loading from './components/Loading/Loading'
 import Home from './Pages/Home/Home';
 import Itsoft from './Pages/Itsoft/Itsoft';
+import Servico from './Pages/Servico/Servico';
+import Booking from './Pages/Booking/Booking';
+import Shopping from './Pages/Shopping/Shopping';
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -10,7 +13,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false)
-    }, 2000)
+    }, 1200)
     return () => clearTimeout(timer)
   }, [])
 
@@ -23,6 +26,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/itsoft" element={<Itsoft/>} />
+        <Route path="/servicos/:id" element={<Servico />} />
+        <Route path="/booking/:service" element={<Booking/>}/>
+        <Route path="/shopping" element={<Shopping />} />
       </Routes>
     </Router>
    

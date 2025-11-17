@@ -1,0 +1,253 @@
+.servico-page {
+    min-height: 100vh;
+}
+
+/* Hero Section */
+.servico-hero {
+    padding: 120px 0 80px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    position: relative;
+}
+
+.servico-hero-content {
+    display: flex;
+    align-items: center;
+    min-height: 400px;
+}
+
+.servico-breadcrumb {
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.servico-breadcrumb a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.servico-breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.servico-breadcrumb span {
+    color: #E53935;
+}
+
+.servico-icone-hero {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.servico-hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.servico-hero-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+.servico-hero-actions {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.section{
+    padding: 0 !important;
+}
+/* Detalhes Section */
+.service-titulo{
+    padding-top: 2rem;
+    color: black;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+.servico-detalhes {
+    /* padding: 80px 0; */
+    background: #e6e7e9;
+}
+
+.detalhes-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+    background: black;
+}
+
+.detalhes-content h2 {
+    color: #1a202c;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+.descricao-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    /* align-items: center; */
+    margin-bottom: 2rem;
+    color: var(--preto);
+    font-size: large;
+    text-align: justify;
+    padding: 1rem 0;
+}
+.descricao-container div{
+    /* line-height: 1.6; */
+    padding:0 .1rem;
+}
+.descricao-container img{
+    width: 100%;
+    border-radius: 8px;
+}
+
+.detalhes-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.75rem 1.5rem; /* espaçamento entre linhas e colunas */
+  margin-top: 1.5rem;
+}
+
+.detalhe-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.detalhe-item span:first-child {
+  color: var(--primary-color, #007bff);
+  font-weight: bold;
+}
+
+.detalhe-icone {
+    color: #059669;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Sidebar */
+.beneficios-sidebar h3 {
+    color: #1a202c;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.beneficios-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.beneficio-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.beneficio-icone {
+    font-size: 1.2rem;
+}
+
+.cta-sidebar {
+    background: #1a202c;
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.cta-sidebar h4 {
+    margin-bottom: 10px;
+    color: white;
+}
+
+.cta-sidebar p {
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+/* CTA Final */
+.servico-cta-final {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+}
+
+.cta-final-content h2 {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 2.5rem;
+}
+
+.cta-final-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.cta-final-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Not Found */
+.servico-not-found {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.not-found-content {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.not-found-content h1 {
+    color: #E53935;
+    margin-bottom: 20px;
+}
+
+.not-found-content p {
+    color: #4a5568;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .detalhes-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .servico-hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .servico-hero-actions {
+        flex-direction: column;
+    }
+
+    .cta-final-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+

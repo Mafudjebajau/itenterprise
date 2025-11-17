@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import './HeaderItsoft.css'
-import { FaCogs,FaCog, FaHome, FaWindowClose } from 'react-icons/fa'
+import { FaCogs, FaCog, FaHome, FaWindowClose, FaShoppingCart } from 'react-icons/fa'
 import { FaChartBar, FaPersonBooth, FaShield } from 'react-icons/fa6'
+import logoTechSoft from '../../assets/logoTechSoft.svg'
 
 const HeaderItsoft = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -55,20 +56,22 @@ const HeaderItsoft = () => {
   }, [])
 
   const servicos = [
-    { nome: 'Consultoria TI', anchor: '#consultoria', icone: '💼' },
-    { nome: 'Configurações Rede', anchor: '#redes', icone: '🌐' },
-    { nome: 'Telefonia IP', anchor: '#telefonia', icone: '📞' },
-    { nome: 'Formação Avançada', anchor: '#formacao', icone: '🎓' },
-    { nome: 'Segurança Eletrónica', anchor: '#seguranca', icone: '🔒' },
-    { nome: 'Suporte Cloud', anchor: '#cloud', icone: '☁️' },
-    { nome: 'Licenciamento', anchor: '#licenciamento', icone: '📋' },
-    { nome: 'Desenvolvimento', anchor: '#desenvolvimento', icone: '💻' },
-    { nome: 'Câmaras Segurança', anchor: '#camaras', icone: '📹' }
+    { nome: 'Desenvolvimento de Software', anchor: '#services', icone: '💻' },
+    { nome: 'Infraestrutura de Redes TI', anchor: '#services', icone: '🌐' },
+    { nome: 'Central IP PBX Telefonia IP', anchor: '#services', icone: '📞' },
+    { nome: 'Cursos de Informática Basico ao Avançado', anchor: '#services', icone: '🎓' },
+    { nome: 'Segurança de Informação', anchor: '#services', icone: '🔒' },
+    { nome: 'Consultoria Informática', anchor: '#services', icone: '💼' },
+    { nome: 'Serviços de Segurança eletrónica', anchor: '#services', icone: '🔒' },
+    { nome: 'Comunicação Visual', anchor: '#services', icone: '📋' },
+    { nome: 'Suporte em nuvem', anchor: '#services', icone: '☁️' }
   ]
-
+  const navigate = useNavigate()
   const scrollToSection = (anchor) => {
     if (location.pathname !== '/itsoft') {
-      window.location.href = `/itsoft${anchor}`
+      navigate(`/itsoft${anchor}`)
+      // console.lgo(navigate(`/itsoft${anchor}`))
+
     } else {
       const element = document.querySelector(anchor)
       if (element) {
@@ -79,8 +82,8 @@ const HeaderItsoft = () => {
   }
 
   const quickActions = [
-    { label: 'Ligar', icon: '📞', action: 'tel:+351912345678' },
-    { label: 'WhatsApp', icon: '💬', action: 'https://wa.me/351912345678' },
+    { label: 'Ligar', icon: '📞', action: 'tel:+245 95 000 00 00' },
+    { label: 'WhatsApp', icon: '💬', action: 'https://wa.me/00245950000000' },
     { label: 'Email', icon: '✉️', action: 'mailto:itsoft@itinterprises.com' }
   ]
 
@@ -93,9 +96,8 @@ const HeaderItsoft = () => {
             <div className="itsoft-logo">
               <Link to="/itsoft" onClick={closeMenu}>
                 <div className="logo-content">
-                  <span className="logo-icon">💻</span>
                   <div className="logo-text">
-                    <span className="logo-main">ITSOFT</span>
+                    <span className="logo-main"><img src={logoTechSoft} alt="logo" /></span>
                     <span className="logo-sub">by ITINTERPRISES</span>
                   </div>
                 </div>
@@ -105,84 +107,59 @@ const HeaderItsoft = () => {
             {/* Navegação Principal */}
             <nav className={`itsoft-nav ${isMenuOpen ? 'active' : ''}`}>
               {/* Menu Principal Mobile */}
-              <div className="mobile-menu-header">
-           
-                <button className="btn-close-menu" onClick={closeMenu}>
-                  <FaWindowClose/>
-                </button>
-              </div>
+
 
               <ul className="nav-main">
                 <li>
                   <Link to="/" onClick={closeMenu}>
-                    <span className="nav-icon"><FaHome/></span>
+                    <span className="nav-icon"><FaHome /></span>
                     Página Inicial
                   </Link>
                 </li>
-                
+
+                <li>
+                  <Link to="/itsoft" onClick={closeMenu}>
+                    <span className="nav-icon"><FaHome /></span>
+                    Tech Soft
+                  </Link>
+                </li>
+
+
                 <li className="nav-dropdown">
-                  <button 
-                    className={`dropdown-toggle ${activeDropdown === 'servicos' ? 'active' : ''}`}
-                    onClick={() => toggleDropdown('servicos')}
+                  <button
+                    onClick={() => scrollToSection('#services')}
                   >
-                    <span className="nav-icon"><FaCogs/></span>
+                    <span className="nav-icon" ><FaCogs /></span>
                     Nossos Serviços
-                    <span className="dropdown-arrow">{activeDropdown === 'servicos' ? '▲' : '▼'}</span>
                   </button>
-                  
-                  <div className={`dropdown-menu ${activeDropdown === 'servicos' ? 'active' : ''}`}>
-                    <div className="dropdown-header">
-                      <h4>Serviços ITSOFT</h4>
-                      <p>Escolha uma categoria</p>
-                    </div>
-                    <div className="dropdown-grid">
-                      {servicos.map((servico, index) => (
-                        <button
-                          key={index}
-                          className="dropdown-item"
-                          onClick={() => scrollToSection(servico.anchor)}
-                        >
-                          <span className="dropdown-icon">{servico.icone}</span>
-                          <span className="dropdown-text">
-                            <strong>{servico.nome}</strong>
-                            <small>Ver detalhes →</small>
-                          </span>
-                        </button>
-                      ))}
-                    </div>
-                  </div>
+
+
+                </li>
+
+                <li className="nav-dropdown">
+                  <button
+                    onClick={() => navigate('/shopping')}
+                  >
+                    <span className="nav-icon" ><FaShoppingCart /></span>
+                    Loja
+                  </button>
+
+
                 </li>
 
                 <li>
                   <button onClick={() => scrollToSection('#sobre')}>
-                    <span className="nav-icon"><FaPersonBooth/></span>
+                    <span className="nav-icon"><FaPersonBooth /></span>
                     Sobre Nós
                   </button>
                 </li>
-                
-                <li>
-                  <button onClick={() => scrollToSection('#cases')}>
-                    <span className="nav-icon"><FaChartBar/></span>
-                    Cases de Sucesso
-                  </button>
-                </li>
-                
-                <li>
-                  <button onClick={() => scrollToSection('#tecnologias')}>
-                    <span className="nav-icon"><FaCog/></span>
-                    Tecnologias
-                  </button>
-                </li>
               </ul>
-
-
-            
             </nav>
 
-            
+
 
             {/* Menu Mobile Toggle */}
-            <div 
+            <div
               className={`itsoft-menu-toggle ${isMenuOpen ? 'active' : ''}`}
               onClick={toggleMenu}
             >
@@ -206,7 +183,7 @@ const HeaderItsoft = () => {
                 <span className="status-text">Resposta em 15min</span>
               </div>
               <div className="status-item">
-                <span className="status-icon"><FaShield/></span>
+                <span className="status-icon"><FaShield /></span>
                 <span className="status-text">Segurança Garantida</span>
               </div>
             </div>
