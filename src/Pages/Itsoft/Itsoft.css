@@ -333,8 +333,13 @@
 
 /* Cases Section */
 .itsoft-cases {
-  background: #ececec;
+  background: url('../../assets/bg-tech2.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* filter: invert(); */
 }
+
 
 .cases-grid {
   display: grid;
@@ -350,7 +355,9 @@
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.8);
   transition: all 0.3s ease;
+  /* filter: invert(); */
 }
+
 
 .case-card:hover {
   transform: translateY(-8px);
@@ -411,7 +418,10 @@
 
 /* Tecnologias Section */
 .itsoft-tech {
-  background: linear-gradient(135deg, #e7e7e7 0%, #fcfcfc 100%);
+  background: url('../../assets/bg-tech.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .tech-grid {
@@ -480,7 +490,12 @@
 
 /* Processo Section */
 .itsoft-processo {
-  background: #f1f0f0;
+  background: url('../../assets/bg-tech2.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* padding: 1rem; */
+  height: fit-content;
 }
 
 .processo-steps {
@@ -492,12 +507,13 @@
 .processo-item {
   text-align: center;
   padding: 2rem 1rem;
-  background: rgb(255, 255, 255);
+  background: rgb(223, 221, 221);
   backdrop-filter: blur(20px);
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.8);
   transition: all 0.3s ease;
   position: relative;
+  filter: invert();
 }
 
 .processo-item::before {
@@ -507,19 +523,19 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #E53935, #C62828);
+  background: linear-gradient(90deg, #19bbbf, #19bbbf);
   border-radius: 16px 16px 0 0;
 }
 
 .processo-item:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(229, 57, 53, 0.1);
+  box-shadow: 0 15px 40px rgba(53, 229, 200, 0.1);
 }
 
 .step-number {
   font-size: 3rem;
   font-weight: 800;
-  color: rgba(229, 56, 53, 0.932);
+  color: #19bbbf;
   margin-bottom: 1rem;
   line-height: 1;
 }
@@ -612,6 +628,7 @@
   color: white;
   transform: translateY(-20px);
 }
+
 .cards-effect {
   background: transparent;
   color: #E53935;
@@ -622,7 +639,8 @@
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.cards-effect::before{
+
+.cards-effect::before {
   position: absolute;
   content: "";
   bottom: 0;
@@ -633,8 +651,8 @@
   background: #050a1e;
   z-index: -1;
   transition: .5s;
-width: 200px;
-height: 200px;
+  width: 200px;
+  height: 200px;
 }
 
 .cards-effect:hover {
@@ -1494,11 +1512,12 @@ height: 200px;
 
 /* ===== SERVIÇOS ESTILO DATAROAD ===== */
 
-.section-title1 h2{
+.section-title1 h2 {
   font-size: 3rem;
   text-align: center;
 }
-.section-title1 p{
+
+.section-title1 p {
   text-align: center;
 }
 
@@ -1522,32 +1541,73 @@ height: 200px;
 
 /* Card animado - CORREÇÃO PARA ANIMAÇÃO DE BAIXO PARA CIMA */
 .servico-card-dataroad {
-  position: relative;
-  overflow: hidden;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 1rem;
-  padding: 1.5rem;
-  transition: transform 0.3s ease, color 0.3s ease;
+ position: relative;
+  background: #ffffff8c;
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f03a;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
-  z-index: 1; /* Mudei para 1 */
+  overflow: hidden;
+  height: auto;
+  min-height: 320px;
+
+  color:white !important;
+}
+.itsoft-servicos:hover .servico-card-dataroad {
+  position: relative;
+  background: #3e3d3d8c;
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f03a;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  overflow: hidden;
+  height: auto;
+  min-height: 320px;
+  backdrop-filter: blur(2px);
+}
+
+.itsoft-servicos:hover h3,
+.itsoft-servicos:hover p,
+.itsoft-servicos:hover li {
+  color: #ffffff !important;  
+}
+
+.itsoft-servicos:hover .servico-link {
+  color: #000000 !important;
+  background: rgb(255, 255, 255) !important;
+  padding: 1rem;
+}
+
+.servico-card-dataroad h3,
+.servico-card-dataroad p,
+.servico-card-dataroad li {
+  color: #080808 !important;  
 }
 
 .servico-card-dataroad::before {
   content: "";
   position: absolute;
-  bottom: 0; /* Começa do fundo */
+  bottom: 0;
+  /* Começa do fundo */
   left: 0;
   width: 100%;
-  height: 0%; /* Altura inicial 0 */
-  background: linear-gradient(0deg, #2e0101 0%, #752c2c 100%);
+  height: 0%;
+  /* Altura inicial 0 */
+  background: linear-gradient(0deg, #ac0000 0%, #ac1010 100%);
   transition: height 0.5s ease;
-  z-index: -1; /* Fica atrás do conteúdo */
+  z-index: -1;
+  /* Fica atrás do conteúdo */
   border-radius: inherit;
 }
 
+
 .servico-card-dataroad:hover::before {
-  height: 100%; /* Preenche toda a altura no hover */
+  height: 100%;
+  /* Preenche toda a altura no hover */
 }
 
 .servico-card-dataroad:hover {
@@ -1559,6 +1619,12 @@ height: 200px;
 .servico-card-dataroad:hover p,
 .servico-card-dataroad:hover li {
   color: #fff !important;
+}
+
+.servico-card-dataroad:hover .servico-link {
+  color: #000000 !important;
+  background: rgb(255, 255, 255) !important;
+  padding: 1rem;
 }
 
 .servico-card-dataroad:hover {
@@ -2465,7 +2531,7 @@ height: 200px;
 
 .servico-link {
   text-decoration: none;
-  color: #E53935;
+  color: #250605;
   font-weight: 600;
   display: inline-flex;
   align-items: center;
@@ -2474,7 +2540,7 @@ height: 200px;
 }
 
 .servico-link:hover {
-  color: #2563EB;
+  color: #011133;
   gap: 12px;
 }
 
@@ -2502,44 +2568,65 @@ height: 200px;
   }
 }
 
-.itsoft-equipe-img:hover{
- transform: scale(1.4);
- transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) .5s;
+.itsoft-equipe-img:hover {
+  transform: scale(1.4);
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) .5s;
 }
+
 /* Serviços Section */
 .itsoft-servicos {
   position: relative !important;
-  background: #f8fafc;
+  background: url('../../assets/bg-services-reverse.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   padding: 80px 0;
 }
-.itsoft-servicos .container{
+
+.itsoft-servicos .container {
   position: relative;
-  
+
 }
-.paragraph{
+
+.paragraph {
   color: black;
 }
-.itsoft-servicos::before {
+
+/* .itsoft-servicos::before {
   content: "";
   position: absolute !important;
   top: 0;
   right: 0;
   width: 0%;
   height: 0%;
-  background: linear-gradient(135deg, #0c0c0c 0%, #000000 100%);
+  background: url('../../assets/bg-services.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position:center;
   transition: all 0.5s ease;
   z-index: 0;
   border-radius: inherit;
+} */
+
+.itsoft-servicos:hover {
+  background: url('../../assets/bg-services.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.5s ease-in-out;
 }
-.itsoft-servicos:hover::before {
+
+/* .itsoft-servicos:hover::before {
   width: 100%;
   height: 100%;
-}
-.itsoft-servicos:hover .black{
+} */
+
+.itsoft-servicos:hover .black {
   color: white !important;
 }
-.itsoft-servicos:hover .section-title1 p{
-  color:'white' !important;
+
+.itsoft-servicos:hover .section-title1 p {
+  color: 'white' !important;
 }
 
 .servicos-grid {
@@ -2647,7 +2734,7 @@ height: 200px;
 
 .servico-link {
   text-decoration: none;
-  color: #E53935;
+  color: #310403;
   font-weight: 600;
   display: inline-flex;
   align-items: center;
@@ -2656,7 +2743,7 @@ height: 200px;
 }
 
 .servico-link:hover {
-  color: #2563EB;
+  color: #020713;
   gap: 12px;
 }
 

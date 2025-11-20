@@ -148,7 +148,7 @@ body {
 .section {
   padding: 100px 0;
   position: relative;
-  border-top: 1px solid red;
+  border-top: 1px solid rgb(189, 188, 188);
   padding: 2rem 0 !important;
 }
 

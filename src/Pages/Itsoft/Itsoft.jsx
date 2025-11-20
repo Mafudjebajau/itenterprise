@@ -7,6 +7,7 @@ import itsoftEquipe from '../../assets/it-team.webp'
 import mulherAoTelephone from "../../assets/mulheraotelephone.jpeg"
 import desenvolvimentodesoftware from "../../assets/desenvolimentodesoftware.jpg"
 import logoTechSoft from '../../assets/logoTechSoft.svg'
+import techimg from '../../assets/bg-1.jpg'
 
 import ToTopButton from '../../components/Adicionais/ToTopButton'
 import { Link } from 'react-router-dom'
@@ -38,7 +39,7 @@ const Itsoft = () => {
             id: 3,
             titulo: "Suporte de TI Local e Remota 24H",
             descricao: "O suporte de TI especialista ajuda na solução de qualquer problema com eficiência. Temos em nosso portfólio, expertises estratégicas para produção em escritórios, indústrias e qualquer tipo de seguimento.",
-            imagem: desenvolvimentodesoftware,
+            imagem: techimg,
             icone: "💻",
             corDestaque: "#059669"
         },
