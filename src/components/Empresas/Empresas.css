@@ -1,5 +1,5 @@
 .empresas {
-  background: linear-gradient(135deg,#ffffff 100%,  #f1efef 100%);
+  background: linear-gradient(135deg, #ffffff 100%, #f1efef 100%);
   position: relative;
 }
 
@@ -137,21 +137,21 @@
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  
+
   .empresa-card {
     padding: 2.5rem 1.5rem;
   }
-  
+
   .empresa-icone {
     width: 80px;
     height: 80px;
     font-size: 2rem;
   }
-  
+
   .empresa-actions {
     flex-direction: column;
   }
-  
+
   .empresa-actions .btn,
   .empresa-actions .btn-link {
     width: 100%;
@@ -164,13 +164,13 @@
     padding: 2rem 1rem;
     margin: 0 0.5rem;
   }
-  
+
   .empresa-icone {
     width: 70px;
     height: 70px;
     font-size: 1.8rem;
   }
-  
+
   .empresa-card h3 {
     font-size: 1.4rem;
   }

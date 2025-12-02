@@ -1,11 +1,11 @@
 import './Footer.css'
-import {FaAt, FaLocationArrow, FaPhone} from "react-icons/fa6"
+import { FaAt, FaLocationArrow, FaPhone } from "react-icons/fa6"
 
 const Footer = () => {
   return (
     <footer id="contato" className="footer">
       <div className="container">
-        <div className="footer-content">
+        <div className="footer-content" data-aos="fade-up">
           <div className="footer-section">
             <h3>ITINTERPRISES</h3>
             <p>Inovação e excelência em diversos segmentos, construindo o futuro hoje.</p>
@@ -20,12 +20,12 @@ const Footer = () => {
           </div>
           <div className="footer-section">
             <h4>Contato</h4>
-            <p><FaAt color='white'/> Email: itinterprises@gmail.com</p>
-            <p><FaPhone color='green'/> Telefone: (+245) 000 00 00</p>
-            <p><FaLocationArrow color='red'/> Endereço: Rua de Embaixada de Portugal, Bissau, Guiné-Bissau</p>
+            <p><FaAt color='white' /> Email: itinterprises@gmail.com</p>
+            <p><FaPhone color='green' /> Telefone: (+245) 000 00 00</p>
+            <p><FaLocationArrow color='red' /> Endereço: Rua de Embaixada de Portugal, Bissau, Guiné-Bissau</p>
           </div>
         </div>
-        <div className="footer-bottom">
+        <div className="footer-bottom" data-aos="fade-up" data-aos-delay="200">
           <p>&copy; {new Date().getFullYear()} ITINTERPRISES. Todos os direitos reservados.</p>
         </div>
       </div>

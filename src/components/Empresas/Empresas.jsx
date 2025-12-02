@@ -34,14 +34,19 @@ const Empresas = () => {
   return (
     <section id="empresas" className="section empresas">
       <div className="container">
-        <div className="section-title">
+        <div className="section-title" data-aos="fade-up">
           <h2 className='black'>Nossas <b className='danger'>Empresas</b></h2>
-          <p style={{color:"black"}}>Diversidade de segmentos, mesma excelência em qualidade</p>
+          <p style={{ color: "black" }}>Diversidade de segmentos, mesma excelência em qualidade</p>
         </div>
         <div className="empresas-grid">
-          {empresas.map(empresa => (
-            <div key={empresa.id} className="empresa-card">
-              <div 
+          {empresas.map((empresa, index) => (
+            <div
+              key={empresa.id}
+              className="empresa-card"
+              data-aos="fade-up"
+              data-aos-delay={index * 200}
+            >
+              <div
                 className="empresa-icone"
                 style={{ background: empresa.cor }}
               >
@@ -51,9 +56,9 @@ const Empresas = () => {
               <p className="empresa-descricao">{empresa.descricao}</p>
               <p className="empresa-detalhes">{empresa.detalhes}</p>
               <div className="empresa-actions">
-                <a  className="btn btn-primary" onClick={(e)=>{
+                <a className="btn btn-primary" onClick={(e) => {
                   e.preventDefault();
-                  navigate("/"+empresa.nome.toLowerCase().replace(" ",""))
+                  navigate("/" + empresa.nome.toLowerCase().replace(" ", ""))
                 }}>Saiba Mais</a>
               </div>
             </div>

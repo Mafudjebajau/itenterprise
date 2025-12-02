@@ -121,7 +121,7 @@
   .menu-toggle {
     display: flex;
   }
-  
+
   .nav {
     position: fixed;
     top: 100%;
@@ -137,29 +137,29 @@
     border-top: 1px solid rgba(229, 57, 53, 0.2);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   }
-  
+
   .nav.active {
     transform: translateY(0);
     opacity: 1;
     visibility: visible;
   }
-  
+
   .nav ul {
     flex-direction: column;
     gap: 0;
     text-align: center;
     padding: 0 1rem;
   }
-  
+
   .nav li {
     padding: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
-  
+
   .nav li:last-child {
     border-bottom: none;
   }
-  
+
   .nav a {
     display: block;
     padding: 1.2rem 1rem;
@@ -168,22 +168,22 @@
     border-radius: 8px;
     margin: 0.2rem 0;
   }
-  
+
   .nav a:hover {
     background: linear-gradient(135deg, rgba(229, 57, 53, 0.1) 0%, rgba(198, 40, 40, 0.1) 100%);
     color: var(--vermelho);
     transform: translateX(5px);
   }
-  
+
   .nav a::after {
     display: none;
   }
-  
+
   .logo h1 {
     font-size: 1.5rem;
     letter-spacing: 1px;
   }
-  
+
   /* Quando o menu está aberto */
   .header.menu-open {
     background-color: rgba(33, 33, 33, 0.98);
@@ -194,29 +194,29 @@
   .header {
     padding: 0.8rem 0;
   }
-  
+
   .header.scrolled {
     padding: 0.6rem 0;
   }
-  
+
   .logo h1 {
     font-size: 1.3rem;
     letter-spacing: 1px;
   }
-  
+
   .nav {
     padding: 1.5rem 0;
   }
-  
+
   .nav a {
     padding: 1rem 0.8rem;
     font-size: 1rem;
   }
-  
+
   .menu-toggle {
     gap: 5px;
   }
-  
+
   .menu-toggle span {
     width: 25px;
     height: 2.5px;

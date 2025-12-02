@@ -46,7 +46,7 @@ const Servico = () => {
                 >
                     <div className="container">
                         <div className="servico-hero-content">
-                            <div className="servico-hero-text">
+                            <div className="servico-hero-text" data-aos="fade-up">
                                 <div className="servico-breadcrumb">
                                     <Link to="/itsoft">IT TECH SOFT</Link> / <Link to="/itsoft#servicos">Serviços</Link> / <span>{servicoEncontrado.titulo}</span>
                                 </div>
@@ -72,18 +72,18 @@ const Servico = () => {
                 {/* Detalhes do Serviço */}
                 <section className="servico-detalhes section">
                     <div className="container">
-                        <h2 className='service-titulo'>{servicoEncontrado.titulo}</h2>
+                        <h2 className='service-titulo' data-aos="fade-right">{servicoEncontrado.titulo}</h2>
                         <div className='descricao-container'>
-                            <div>{servicoEncontrado.descricao}</div>
-                            <div>
+                            <div data-aos="fade-right">{servicoEncontrado.descricao}</div>
+                            <div data-aos="fade-left">
                                 <img src={servicoEncontrado.imagem} alt="imagem" />
                             </div>
                         </div>
                         <div className="detalhes-content">
-                            <h2>O que oferecemos</h2>
+                            <h2 data-aos="fade-up">O que oferecemos</h2>
                             <div className="detalhes-lista ">
                                 {servicoEncontrado.detalhes.map((detalhe, index) => (
-                                    <div key={index} className="detalhe-item" style={{ color: 'black' }}>
+                                    <div key={index} className="detalhe-item" style={{ color: 'black' }} data-aos="fade-up" data-aos-delay={index * 50}>
                                         <span>✓</span>
                                         <span>{detalhe}</span>
                                     </div>

@@ -115,14 +115,14 @@ ${dadosCliente.nome}
             <div className="booking-page" >
                 <div className="booking-container container">
                     {/* Cabeçalho */}
-                    <div className="booking-header"  style={{background:`url(${servico.imagem})  white`, backgroundSize:'cover', backgroundPosition:'center',backgroundRepeat:'no-repeat', color:'white'}}>
+                    <div className="booking-header" style={{ background: `url(${servico.imagem})  white`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', color: 'white' }} data-aos="fade-down">
                         <div className="booking-hero-overlay">
                             <div className="booking-breadcrumb">
                                 <span>IT TECH SOFT</span> / <span>Serviços</span> / <span>Solicitar Orçamento</span>
                             </div>
                             <div className="servico-info">
                                 <h2>{servico.titulo}</h2>
-                                <p style={{fontSize:'1.4rem'}}>{servico.descricao}</p>
+                                <p style={{ fontSize: '1.4rem' }}>{servico.descricao}</p>
                             </div>
                         </div>
                     </div>
@@ -138,12 +138,12 @@ ${dadosCliente.nome}
                         <strong>Debug:</strong> {detalhesServico.length} serviços encontrados para renderização
                     </div> */}
 
-                   <marquee className='black' behavior="" direction="left">Respondemos o seu e-mail em menos de 30 minutos!</marquee>
-                    <div className="booking-content">
+                    <marquee className='black' behavior="" direction="left">Respondemos o seu e-mail em menos de 30 minutos!</marquee>
+                    <div className="booking-content" data-aos="fade-up">
                         {/* Coluna de Serviços */}
                         <div className="servicos-coluna">
                             <h3>Selecione os serviços desejados:</h3>
-                            
+
                             {detalhesServico.length > 0 ? (
                                 <>
                                     <div className="servicos-list">
@@ -165,7 +165,7 @@ ${dadosCliente.nome}
                                             )
                                         })}
                                     </div>
-                                    
+
                                     {/* Resumo em tempo real */}
                                     {servicosSelecionados.length > 0 && (
                                         <div className="resumo-selecionados">
@@ -256,7 +256,7 @@ ${dadosCliente.nome}
                     </div>
 
                     {/* Botão de Confirmação */}
-                    <div className="booking-actions">
+                    <div className="booking-actions" data-aos="fade-up" data-aos-delay="200">
                         <button
                             className={`btn-confirmar ${!isFormValido() ? 'btn-disabled' : ''}`}
                             disabled={!isFormValido()}

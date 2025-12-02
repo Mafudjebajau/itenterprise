@@ -117,29 +117,29 @@ const Noticias = () => {
   return (
     <section id="noticias" className="section noticias">
       <div className="container">
-        <div className="section-title">
+        <div className="section-title" data-aos="fade-up">
           <h2 className='black'>Notícias em <b className="danger">Destaque</b> </h2>
-          <p style={{color:'black'}}>Acompanhe as últimas atualizações do grupo ITINTERPRISES</p>
+          <p style={{ color: 'black' }}>Acompanhe as últimas atualizações do grupo ITINTERPRISES</p>
         </div>
 
         <div className="noticias-content">
           {/* Carrossel Principal */}
-          <div className="carrossel-container">
-            <div 
+          <div className="carrossel-container" data-aos="fade-right">
+            <div
               className="carrossel-track"
               ref={carrosselRef}
               style={{ transform: `translateX(-${noticiaAtiva * 100}%)` }}
             >
               {noticias.map((noticia, index) => (
-                <div 
-                  key={noticia.id} 
+                <div
+                  key={noticia.id}
                   className={`carrossel-slide ${index === noticiaAtiva ? 'active' : ''}`}
                   onMouseEnter={() => setPausado(true)}
                   onMouseLeave={() => setPausado(false)}
                 >
                   <div className="slide-imagem">
-                    <img 
-                      src={noticia.imagem} 
+                    <img
+                      src={noticia.imagem}
                       alt={noticia.titulo}
                       loading="lazy"
                     />
@@ -169,7 +169,7 @@ const Noticias = () => {
                         Ler Notícia Completa
                       </button>
                       <div className="controles-manuais">
-                        <button 
+                        <button
                           className="btn-controle"
                           onClick={() => setPausado(!pausado)}
                         >
@@ -183,14 +183,14 @@ const Noticias = () => {
             </div>
 
             {/* Controles do Carrossel */}
-            <button 
+            <button
               className="carrossel-controle controle-anterior"
               onClick={noticiaAnterior}
               aria-label="Notícia anterior"
             >
               ‹
             </button>
-            <button 
+            <button
               className="carrossel-controle controle-proximo"
               onClick={proximaNoticia}
               aria-label="Próxima notícia"
@@ -218,9 +218,9 @@ const Noticias = () => {
           </div>
 
           {/* Sidebar */}
-          <aside className="noticias-sidebar">
+          <aside className="noticias-sidebar" data-aos="fade-left">
             <div className="sidebar-card">
-              <h3><FaCalendar/> Próximos Eventos</h3>
+              <h3><FaCalendar /> Próximos Eventos</h3>
               <div className="eventos-lista">
                 {eventos.map((evento, index) => (
                   <div key={index} className="evento-item">
@@ -237,7 +237,7 @@ const Noticias = () => {
               </div>
             </div>
 
-           
+
           </aside>
         </div>
 

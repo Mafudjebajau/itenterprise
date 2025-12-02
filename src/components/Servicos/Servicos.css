@@ -1,5 +1,5 @@
 .servicos {
-  background: linear-gradient(135deg,#1f1f1fbd 100%, var(--branco) 10%, #000000 100%);
+  background: linear-gradient(135deg, #1f1f1fbd 100%, var(--branco) 10%, #000000 100%);
   position: relative;
 }
 
@@ -97,6 +97,7 @@
   /* background: rgba(0, 0, 0, 0.05); */
   transform: translateX(5px);
 }
+
 .servico-actions {
   display: flex;
   gap: 1rem;
@@ -151,10 +152,12 @@
     transform: translate(-50%, -50%) scale(1);
     opacity: 1;
   }
+
   50% {
     transform: translate(-50%, -50%) scale(1.5);
     opacity: 0.5;
   }
+
   100% {
     transform: translate(-50%, -50%) scale(1);
     opacity: 1;
@@ -167,31 +170,32 @@
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  
+
   .servico-grupo {
     padding: 2rem 1.5rem;
   }
-  
+
   .servico-header {
     flex-direction: column;
     text-align: center;
     gap: 0.8rem;
   }
-  
+
   .servico-item {
     flex-direction: column;
     text-align: center;
     gap: 0.5rem;
   }
-  
+
   .servico-dot {
     align-self: center;
     margin-top: 0;
   }
-   .servico-actions {
+
+  .servico-actions {
     flex-direction: column;
   }
-  
+
   .servico-actions .btn,
   .servico-actions .btn-link {
     width: 100%;
@@ -203,22 +207,22 @@
   .servicos-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .servico-grupo {
     padding: 1.5rem 1rem;
     margin: 0 0.5rem;
   }
-  
+
   .servico-header {
     margin-bottom: 1.5rem;
   }
-  
+
   .servico-icone {
     width: 50px;
     height: 50px;
     font-size: 1.3rem;
   }
-  
+
   .servico-header h3 {
     font-size: 1.3rem;
   }

@@ -42,13 +42,18 @@ const Servicos = () => {
   return (
     <section id="servicos" className="section servicos">
       <div className="container">
-        <div className="section-title">
+        <div className="section-title" data-aos="fade-up">
           <h2>Nossos <b className='danger'>Serviços</b></h2>
           <p>Excelência e qualidade em cada segmento de atuação</p>
         </div>
         <div className="servicos-grid">
           {servicos.map((grupo, index) => (
-            <div key={index} className="servico-grupo">
+            <div
+              key={index}
+              className="servico-grupo"
+              data-aos="fade-up"
+              data-aos-delay={index * 200}
+            >
               <div className="servico-header">
                 <div
                   className="servico-icone"
@@ -70,10 +75,10 @@ const Servicos = () => {
                   </li>
                 ))}
               </ul>
-              <div className="empresa-actions" style={{marginTop: '10px'}}>
-                 <a  className="btn btn-primary" onClick={(e)=>{
+              <div className="empresa-actions" style={{ marginTop: '10px' }}>
+                <a className="btn btn-primary" onClick={(e) => {
                   e.preventDefault();
-                  navigate("/"+grupo.empresa.toLowerCase().replace(" ",""))
+                  navigate("/" + grupo.empresa.toLowerCase().replace(" ", ""))
                 }}>Saiba Mais</a>
               </div>
             </div>

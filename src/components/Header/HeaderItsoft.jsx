@@ -89,7 +89,7 @@ const HeaderItsoft = () => {
 
   return (
     <>
-      <header className={`itsoft-header ${isScrolled ? 'scrolled' : ''} ${isMenuOpen ? 'menu-open' : ''}`}>
+      <header className={`itsoft-header ${isScrolled ? 'scrolled' : ''} ${isMenuOpen ? 'menu-open' : ''}`} data-aos="fade-down">
         <div className="container">
           <div className="itsoft-header-content">
             {/* Logo */}

@@ -73,7 +73,7 @@ const Shopping = () => {
     const adicionarAoCarrinho = (produto) => {
         setCarrinho(prevCarrinho => {
             const itemExistente = prevCarrinho.find(item => item.id === produto.id)
-            
+
             if (itemExistente) {
                 return prevCarrinho.map(item =>
                     item.id === produto.id
@@ -87,7 +87,7 @@ const Shopping = () => {
     }
 
     const removerDoCarrinho = (produtoId) => {
-        setCarrinho(prevCarrinho => 
+        setCarrinho(prevCarrinho =>
             prevCarrinho.filter(item => item.id !== produtoId)
         )
     }
@@ -118,26 +118,26 @@ const Shopping = () => {
     return (
         <>
             <HeaderItsoft />
-             <div className="shopping-actions">
-                            <button 
-                                className="btn-carrinho"
-                                onClick={() => setCarrinhoAberto(true)}
-                            >
-                                <FaShoppingCart size={24} color='gold'/> <br/><span>{getTotalItens()}</span>
-                            </button>
-                        </div>
+            <div className="shopping-actions">
+                <button
+                    className="btn-carrinho"
+                    onClick={() => setCarrinhoAberto(true)}
+                >
+                    <FaShoppingCart size={24} color='gold' /> <br /><span>{getTotalItens()}</span>
+                </button>
+            </div>
             <div className="shopping-page">
                 <div className="container">
                     {/* Header da Loja */}
-                    <div className="shopping-header">
+                    <div className="shopping-header" data-aos="fade-down">
                         <h1>Nossa Loja de Serviços</h1>
                         <p>Encontre a solução perfeita para o seu negócio</p>
-                        
-                       
+
+
                     </div>
 
                     {/* Filtros */}
-                    <div className="filtros">
+                    <div className="filtros" data-aos="fade-up" data-aos-delay="200">
                         <button className="filtro-btn active">Todos</button>
                         <button className="filtro-btn">Desenvolvimento Web</button>
                         <button className="filtro-btn">E-commerce</button>
@@ -147,8 +147,8 @@ const Shopping = () => {
 
                     {/* Grid de Produtos */}
                     <div className="produtos-grid">
-                        {produtos.map(produto => (
-                            <div key={produto.id} className={`produto-card ${produto.destaque ? 'destaque' : ''}`}>
+                        {produtos.map((produto, index) => (
+                            <div key={produto.id} className={`produto-card ${produto.destaque ? 'destaque' : ''}`} data-aos="fade-up" data-aos-delay={index * 100}>
                                 {produto.destaque && <span className="badge-destaque">Mais Vendido</span>}
                                 <div className="produto-imagem">
                                     <img src={produto.imagem} alt={produto.nome} />
@@ -160,7 +160,7 @@ const Shopping = () => {
                                     <div className="produto-preco">
                                         XOF {produto.preco.toLocaleString('pt-PT')}
                                     </div>
-                                    <button 
+                                    <button
                                         className="btn-adicionar"
                                         onClick={() => adicionarAoCarrinho(produto)}
                                     >
@@ -176,7 +176,7 @@ const Shopping = () => {
                 <div className={`carrinho-sidebar ${carrinhoAberto ? 'aberto' : ''}`}>
                     <div className="carrinho-header">
                         <h2>Seu Carrinho</h2>
-                        <button 
+                        <button
                             className="btn-fechar"
                             onClick={() => setCarrinhoAberto(false)}
                         >
@@ -203,19 +203,19 @@ const Shopping = () => {
                                             </div>
                                             <div className="item-controles">
                                                 <div className="quantidade-controles">
-                                                    <button 
+                                                    <button
                                                         onClick={() => atualizarQuantidade(item.id, item.quantidade - 1)}
                                                     >
                                                         -
                                                     </button>
                                                     <span className='black'>{item.quantidade}</span>
-                                                    <button 
+                                                    <button
                                                         onClick={() => atualizarQuantidade(item.id, item.quantidade + 1)}
                                                     >
                                                         +
                                                     </button>
                                                 </div>
-                                                <button 
+                                                <button
                                                     className="btn-remover"
                                                     onClick={() => removerDoCarrinho(item.id)}
                                                 >
@@ -251,7 +251,7 @@ const Shopping = () => {
 
                 {/* Overlay do carrinho */}
                 {carrinhoAberto && (
-                    <div 
+                    <div
                         className="carrinho-overlay"
                         onClick={() => setCarrinhoAberto(false)}
                     ></div>

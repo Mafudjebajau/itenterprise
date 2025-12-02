@@ -330,7 +330,7 @@ const Itsoft = () => {
 
     return (
         <><HeaderItsoft />
-           {showButton && <ToTopButton />}
+            {showButton && <ToTopButton />}
 
             <div className="itsoft-page">
                 {/* Hero Section com Slider */}
@@ -366,7 +366,7 @@ const Itsoft = () => {
                                 <h1>IT TECH SOFT</h1>
 
                                 {/* Título e Descrição Dinâmicos */}
-                                <div className="hero-slide-content">
+                                <div className="hero-slide-content" data-aos="fade-up" data-aos-delay="200">
                                     <h2 style={{ color: heroSlides[heroSlideAtivo]?.corDestaque }}>
                                         {heroSlides[heroSlideAtivo]?.titulo}
                                     </h2>
@@ -434,7 +434,7 @@ const Itsoft = () => {
                 <section className="itsoft-sobre section" id='sobre'>
                     <div className="container">
                         <div className="sobre-content">
-                            <div className="sobre-text">
+                            <div className="sobre-text" data-aos="fade-right">
                                 <h2>Sobre <b className="danger">IT tech soft</b></h2>
                                 <p style={{ color: "#222", textAlign: "justify" }}>
                                     A IT_ENTERPRISE SARL (TECH & SOFT) é uma empresa de TI especializada em desenvolvimento de software, comunicação visual, infraestrutura e redes, além de segurança da informação e eletrônica.
@@ -450,7 +450,7 @@ const Itsoft = () => {
                                 </p>
                             </div>
 
-                            <div className="sobre-imagem">
+                            <div className="sobre-imagem" data-aos="fade-left">
                                 <img
                                     src={itsoftEquipe}
                                     alt="Equipe TECH SOFT"
@@ -481,16 +481,18 @@ const Itsoft = () => {
                 {/* Serviços - Versão Simplificada */}
                 <section className="itsoft-servicos " id='services' >
                     <div className="container">
-                        <div className="section-title1">
+                        <div className="section-title1" data-aos="fade-up">
                             <h2 className='black'>Nossos <b className="danger">Serviços</b></h2>
                             <p className='black'>Soluções completas de TI para empresas de todos os tamanhos</p>
                         </div>
 
                         <div className="servicos-grid">
-                            {servicos.map((servico) => (
+                            {servicos.map((servico, index) => (
                                 <div
                                     key={servico.id}
                                     className="servico-card-dataroad"
+                                    data-aos="fade-up"
+                                    data-aos-delay={index * 100}
                                 >
                                     <div className="card-header">
                                         <div className="servico-icone">
@@ -532,14 +534,14 @@ const Itsoft = () => {
                 {/* Cases de Sucesso */}
                 <section className="itsoft-cases section" id='cases'>
                     <div className="container">
-                        <div className="section-title">
+                        <div className="section-title" data-aos="fade-up">
                             <h2 className='black'>Casos de <b className="danger">Sucesso</b></h2>
                             <p style={{ color: "#222" }}>Resultados reais que entregamos para nossos clientes</p>
                         </div>
 
                         <div className="cases-grid">
                             {cases.map((caseItem, index) => (
-                                <div key={index} className="case-card">
+                                <div key={index} className="case-card" data-aos="zoom-in" data-aos-delay={index * 150}>
                                     <div className="case-imagem">
                                         <img src={caseItem.imagem} alt={caseItem.empresa} />
                                         <div className="case-overlay">
@@ -571,14 +573,14 @@ const Itsoft = () => {
                 {/* Tecnologias */}
                 <section className="itsoft-tech section" id='tecnologias'>
                     <div className="container">
-                        <div className="section-title">
+                        <div className="section-title" data-aos="fade-up">
                             <h2 className='black'>Tecnologias que <b className="danger">Trabalhamos</b></h2>
                             <p style={{ color: '#222' }}>Parcerias com os principais fabricantes e tecnologias do mercado</p>
                         </div>
 
                         <div className="tech-grid">
                             {tecnologias.map((tech, index) => (
-                                <div key={index} className="tech-card">
+                                <div key={index} className="tech-card" data-aos="flip-up" data-aos-delay={index * 100}>
                                     <div className="tech-categoria">{tech.categoria}</div>
                                     <h4>{tech.nome}</h4>
                                     <div className="tech-certificacoes">
@@ -594,28 +596,28 @@ const Itsoft = () => {
                 {/* Processo de Trabalho */}
                 <section className="itsoft-processo section">
                     <div className="container">
-                        <div className="section-title">
+                        <div className="section-title" data-aos="fade-up">
                             <h2 className='black'>Como <b className="danger">Trabalhamos</b></h2>
                             <p style={{ color: '#222' }}>Metodologia comprovada para garantir o sucesso do seu projeto</p>
                         </div>
 
                         <div className="processo-steps">
-                            <div className="processo-item">
+                            <div className="processo-item" data-aos="fade-up" data-aos-delay="0">
                                 <div className="step-number">01</div>
                                 <h4>Diagnóstico</h4>
                                 <p>Análise detalhada das necessidades e infraestrutura atual</p>
                             </div>
-                            <div className="processo-item">
+                            <div className="processo-item" data-aos="fade-up" data-aos-delay="200">
                                 <div className="step-number">02</div>
                                 <h4>Proposta</h4>
                                 <p>Plano personalizado com soluções e orçamento transparente</p>
                             </div>
-                            <div className="processo-item">
+                            <div className="processo-item" data-aos="fade-up" data-aos-delay="400">
                                 <div className="step-number">03</div>
                                 <h4>Implementação</h4>
                                 <p>Execução com equipas especializadas e mínima interrupção</p>
                             </div>
-                            <div className="processo-item">
+                            <div className="processo-item" data-aos="fade-up" data-aos-delay="600">
                                 <div className="step-number">04</div>
                                 <h4>Suporte</h4>
                                 <p>Acompanhamento contínuo e manutenção preventiva</p>
@@ -627,7 +629,7 @@ const Itsoft = () => {
                 {/* CTA Section */}
                 <section className="itsoft-cta section">
                     <div className="container">
-                        <div className="cta-content">
+                        <div className="cta-content" data-aos="zoom-in">
                             <h2>Precisa de Soluções em TI?</h2>
                             <p>Entre em contacto para uma consultoria gratuita e sem compromisso</p>
                             <div className="cta-buttons">

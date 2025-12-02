@@ -3,7 +3,7 @@
   --vermelho-primario: #E53935;
   --vermelho-escuro: #C62828;
   --vermelho-suave: #EF5350;
-  
+
   /* Cores Neutras - Escala Harmonizada */
   --preto: #121212;
   --preto-claro: #1E1E1E;
@@ -13,34 +13,37 @@
   --cinza: #9E9E9E;
   --cinza-claro: #E0E0E0;
   --branco: #FFFFFF;
-  
+
   /* Cores de Fundo */
   --bg-escuro: #0A0A0A;
   --bg-card: #1A1A1A;
   --bg-hover: rgba(229, 57, 53, 0.05);
-  
+
   /* Gradientes Harmonizados */
   --gradient-vermelho: linear-gradient(135deg, var(--vermelho-primario), var(--vermelho-escuro));
   --gradient-preto: linear-gradient(135deg, var(--preto), var(--preto-claro));
   --gradient-hero: linear-gradient(135deg, var(--preto) 0%, var(--preto-claro) 100%);
   --gradient-overlay: linear-gradient(135deg, rgba(18, 18, 18, 0.9), rgba(30, 30, 30, 0.8));
 }
+
 .black {
   color: var(--preto) !important;
 }
-.danger{
+
+.danger {
   color: var(--vermelho-primario) !important;
 }
 
 
 @font-face {
-    font-family: vampire-wars;
-    src: url("../assets/fonts/aero/Aero.ttf") format("truetype");
+  font-family: vampire-wars;
+  src: url("../assets/fonts/aero/Aero.ttf") format("truetype");
 }
 
 .font {
-    font-family: vampire-wars;
+  font-family: vampire-wars;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -196,23 +199,23 @@ body {
   .section {
     padding: 80px 0;
   }
-  
+
   .section-title {
     margin-bottom: 60px;
   }
-  
+
   .section-title h2 {
     font-size: 2.5rem;
   }
-  
+
   .section-title p {
     font-size: 1.1rem;
   }
-  
+
   .container {
     padding: 0 15px;
   }
-  
+
   .btn {
     padding: 12px 24px;
     font-size: 0.85rem;
@@ -223,15 +226,15 @@ body {
   .section {
     padding: 60px 20px;
   }
-  
+
   .section-title h2 {
     font-size: 2rem;
   }
-  
+
   .section-title p {
     font-size: 1rem;
   }
-  
+
   .btn {
     padding: 10px 20px;
     font-size: 0.8rem;

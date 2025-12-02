@@ -19,7 +19,7 @@
     background: rgb(0, 0, 0);
     padding: 30px;
     /* border-radius: 10px; */
-    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
 }
 
 .booking-breadcrumb {
@@ -49,14 +49,15 @@
     grid-template-columns: 1fr 1fr;
     gap: 30px;
     margin-bottom: 40px;
-    align-items: start; /* Alinha as colunas no topo */
+    align-items: start;
+    /* Alinha as colunas no topo */
 }
 
 .servicos-coluna {
     background: white;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     height: 700px;
@@ -66,31 +67,36 @@
     background: white;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     /* height: 600px; Mesma altura da coluna de serviços */
     display: flex;
     flex-direction: column;
 }
 
-.servicos-coluna h3, .dados-coluna h3 {
+.servicos-coluna h3,
+.dados-coluna h3 {
     color: #2c3e50;
     margin-bottom: 20px;
     font-size: 22px;
     border-bottom: 3px solid #3498db;
     padding-bottom: 10px;
-    flex-shrink: 0; /* Impede que o título diminua */
+    flex-shrink: 0;
+    /* Impede que o título diminua */
 }
 
 /* Serviços Lista - COM ALTURA FIXA */
 .servicos-lista-container {
-    flex: 1; /* Ocupa o espaço restante */
+    flex: 1;
+    /* Ocupa o espaço restante */
     display: flex;
     flex-direction: column;
-    min-height: 0; /* Permite que o conteúdo scroll */
+    min-height: 0;
+    /* Permite que o conteúdo scroll */
 }
 
 .servicos-lista {
-    flex: 1; /* Ocupa todo o espaço disponível */
+    flex: 1;
+    /* Ocupa todo o espaço disponível */
     overflow-y: auto;
     border: 1px solid #ecf0f1;
     border-radius: 8px;
@@ -137,12 +143,12 @@
     background: white;
 }
 
-.checkbox-input:checked + .checkmark {
+.checkbox-input:checked+.checkmark {
     background: #27ae60;
     border-color: #27ae60;
 }
 
-.checkbox-input:checked + .checkmark::after {
+.checkbox-input:checked+.checkmark::after {
     content: '✓';
     color: white;
     font-weight: bold;
@@ -162,8 +168,10 @@
     padding: 15px;
     border-radius: 8px;
     border-left: 4px solid #27ae60;
-    flex-shrink: 0; /* Mantém tamanho fixo */
-    margin-top: auto; /* Empurra para baixo */
+    flex-shrink: 0;
+    /* Mantém tamanho fixo */
+    margin-top: auto;
+    /* Empurra para baixo */
 }
 
 .resumo-selecionados h4 {
@@ -203,10 +211,12 @@
 
 /* Formulário - COM ALTURA FIXA */
 .dados-form {
-    flex: 1; /* Ocupa todo o espaço disponível */
+    flex: 1;
+    /* Ocupa todo o espaço disponível */
     display: flex;
     flex-direction: column;
-    overflow-y: auto; /* Permite scroll se necessário */
+    overflow-y: auto;
+    /* Permite scroll se necessário */
 }
 
 .form-group {
@@ -299,7 +309,8 @@
     font-style: italic;
     font-size: 16px;
 }
-.servicos-list{
+
+.servicos-list {
 
     text-transform: capitalize;
     height: 600px;
@@ -337,7 +348,7 @@
     background: #ff0000;
 }
 
-.booking-hero-overlay{
+.booking-hero-overlay {
     background-color: rgba(0, 0, 0, 0.6);
     padding: 40px;
     border-radius: 10px;
@@ -349,36 +360,38 @@
         margin-top: 5rem;
         padding: 20px 0;
     }
-    
+
     .booking-content {
         grid-template-columns: 1fr;
         gap: 20px;
     }
-    
-    .servicos-coluna, .dados-coluna {
+
+    .servicos-coluna,
+    .dados-coluna {
         padding: 20px;
-        height: auto; /* Altura automática em mobile */
+        height: auto;
+        /* Altura automática em mobile */
         min-height: 400px;
     }
-    
+
     .servicos-lista {
         max-height: 300px;
     }
-    
+
     .btn-confirmar {
         min-width: 100%;
         padding: 15px 20px;
         font-size: 16px;
     }
-    
+
     .container {
         padding: 0 15px;
     }
-    
+
     .servico-info h2 {
         font-size: 24px;
     }
-    
+
     .servico-info p {
         font-size: 16px;
     }
@@ -388,16 +401,18 @@
     .booking-header {
         padding: 20px 15px;
     }
-    
-    .servicos-coluna, .dados-coluna {
+
+    .servicos-coluna,
+    .dados-coluna {
         padding: 15px;
         min-height: 350px;
     }
-    
-    .servicos-coluna h3, .dados-coluna h3 {
+
+    .servicos-coluna h3,
+    .dados-coluna h3 {
         font-size: 20px;
     }
-    
+
     .servicos-lista {
         max-height: 250px;
     }

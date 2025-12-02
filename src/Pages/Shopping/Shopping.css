@@ -18,7 +18,7 @@
     background: white;
     padding: 3rem;
     border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     position: relative;
 }
 
@@ -62,11 +62,12 @@
     box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
 }
 
-.btn-carrinho span{
+.btn-carrinho span {
     font-size: 1.2rem;
     font-weight: bolder;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
 /* Filtros */
 .filtros {
     display: flex;
@@ -106,14 +107,14 @@
     background: white;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     position: relative;
 }
 
 .produto-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
 .produto-card.destaque {
@@ -206,7 +207,7 @@
     width: 400px;
     height: 100vh;
     background: white;
-    box-shadow: -5px 0 25px rgba(0,0,0,0.1);
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
     transition: right 0.3s ease;
     z-index: 1000;
     display: flex;
@@ -389,7 +390,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     z-index: 999;
 }
 
@@ -398,21 +399,21 @@
     .shopping-header {
         padding: 2rem 1rem;
     }
-    
+
     .shopping-actions {
         position: static;
         margin-top: 1rem;
     }
-    
+
     .produtos-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .carrinho-sidebar {
         width: 100%;
         right: -100%;
     }
-    
+
     .filtros {
         justify-content: flex-start;
         overflow-x: auto;
@@ -424,17 +425,17 @@
     .shopping-header h1 {
         font-size: 2rem;
     }
-    
+
     .container {
         padding: 0 15px;
     }
-    
+
     .carrinho-item {
         flex-direction: column;
         align-items: flex-start;
         gap: 1rem;
     }
-    
+
     .item-controles {
         flex-direction: row;
         align-items: center;

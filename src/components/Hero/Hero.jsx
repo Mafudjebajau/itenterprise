@@ -6,17 +6,17 @@ const Hero = () => {
     <section id="home" className="hero">
       <div className="container">
         <div className="hero-content1">
-          
-          <h1 className='font'><sup >IT</sup>INTERPRISES</h1>
-          <h2>Inovação em Diversos Segmentos</h2>
-          <p>
-            Um conglomerado de excelência, unindo tecnologia, turismo e energia 
-            para construir o futuro hoje. Com três empresas especializadas, 
+
+          <h1 className='font' data-aos="fade-down" data-aos-duration="1000"><sup >IT</sup>INTERPRISES</h1>
+          <h2 data-aos="fade-up" data-aos-delay="200">Inovação em Diversos Segmentos</h2>
+          <p data-aos="fade-up" data-aos-delay="400">
+            Um conglomerado de excelência, unindo tecnologia, turismo e energia
+            para construir o futuro hoje. Com três empresas especializadas,
             oferecemos soluções completas e inovadoras.
           </p>
-          <div className="hero-buttons">
+          <div className="hero-buttons" data-aos="fade-up" data-aos-delay="600">
             <a href="#empresas" className="btn btn-primary"> Conheça Nossas Empresas</a>
-            <a href="#contato" className="btn btn-outline" style={{background:'#2c2c2cff'}}><FaPhone color='lime'/> Entre em Contato</a>
+            <a href="#contato" className="btn btn-outline" style={{ background: '#2c2c2cff' }}><FaPhone color='lime' /> Entre em Contato</a>
           </div>
         </div>
       </div>
