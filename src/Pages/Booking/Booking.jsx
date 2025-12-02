@@ -122,7 +122,7 @@ ${dadosCliente.nome}
                             </div>
                             <div className="servico-info">
                                 <h2>{servico.titulo}</h2>
-                                <p style={{ fontSize: '1.4rem' }}>{servico.descricao}</p>
+                                <p >{servico.descricao}</p>
                             </div>
                         </div>
                     </div>

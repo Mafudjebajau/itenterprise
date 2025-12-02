@@ -735,6 +735,10 @@
     font-size: 2rem;
   }
 
+  .sobre-text p {
+    font-size: .9rem;
+  }
+
   .section-title1 h2 {
     font-size: 2rem;
   }
@@ -1541,7 +1545,7 @@
 
 /* Card animado - CORREÇÃO PARA ANIMAÇÃO DE BAIXO PARA CIMA */
 .servico-card-dataroad {
- position: relative;
+  position: relative;
   background: #ffffff8c;
   border-radius: 16px;
   padding: 2.5rem 2rem;
@@ -1553,8 +1557,9 @@
   height: auto;
   min-height: 320px;
 
-  color:white !important;
+  color: white !important;
 }
+
 .itsoft-servicos:hover .servico-card-dataroad {
   position: relative;
   background: #3e3d3d8c;
@@ -1573,7 +1578,7 @@
 .itsoft-servicos:hover h3,
 .itsoft-servicos:hover p,
 .itsoft-servicos:hover li {
-  color: #ffffff !important;  
+  color: #ffffff !important;
 }
 
 .itsoft-servicos:hover .servico-link {
@@ -1585,7 +1590,7 @@
 .servico-card-dataroad h3,
 .servico-card-dataroad p,
 .servico-card-dataroad li {
-  color: #080808 !important;  
+  color: #080808 !important;
 }
 
 .servico-card-dataroad::before {

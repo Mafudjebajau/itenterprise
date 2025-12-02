@@ -34,7 +34,7 @@ const Header = () => {
   }, [])
 
   return (
-    <header className={`header ${isScrolled ? 'scrolled' : ''} ${isMenuOpen ? 'menu-open' : ''}`} >
+    <header className={`header ${isScrolled ? 'scrolled' : ''} ${isMenuOpen ? 'menu-open' : ''}`}>
       <div className="container">
         <div className="header-content">
           <div className="logo">

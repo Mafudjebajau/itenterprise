@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import './HeaderItsoft.css'
-import { FaCogs, FaCog, FaHome, FaWindowClose, FaShoppingCart } from 'react-icons/fa'
+import { FaCogs, FaCog, FaHome, FaWindowClose, FaShoppingCart, FaDotCircle } from 'react-icons/fa'
 import { FaChartBar, FaPersonBooth, FaShield } from 'react-icons/fa6'
 import logoTechSoft from '../../assets/logoTechSoft.svg'
 
@@ -173,20 +173,19 @@ const HeaderItsoft = () => {
         {/* Barra de Status */}
         <div className="status-bar">
           <div className="container">
-            <div className="status-content">
-              <div className="status-item">
-                <span className="status-indicator online"></span>
-                <span className="status-text">Suporte Online</span>
+            <marquee behavior="" direction="">
+              <div className="status-content">
+                <div className="status-item">
+                  <span className="status-indicator"></span>
+                  <span className="status-icon"><FaDotCircle color='lime' /></span>
+                  <span className="status-text">Suporte Online</span>
+                  <span className="status-icon">⚡</span>
+                  <span className="status-text">Resposta em 15min</span>
+                  <span className="status-icon"><FaShield /></span>
+                  <span className="status-text">Segurança Garantida</span>
+                </div>
               </div>
-              <div className="status-item">
-                <span className="status-icon">⚡</span>
-                <span className="status-text">Resposta em 15min</span>
-              </div>
-              <div className="status-item">
-                <span className="status-icon"><FaShield /></span>
-                <span className="status-text">Segurança Garantida</span>
-              </div>
-            </div>
+            </marquee>
           </div>
         </div>
       </header>
