@@ -1,11 +1,13 @@
 import { useNavigate } from 'react-router-dom'
 import './Servicos.css'
 
+import ItTechlogo from '../../assets/logo.svg';
+
 const Servicos = () => {
   const servicos = [
     {
       empresa: "ITSOFT",
-      icone: "💻",
+      icone: ItTechlogo,
       cor: "#E53935",
       servicos: [
         { nome: "Desenvolvimento de Software", descricao: "Sistemas personalizados para seu negócio" },
@@ -59,7 +61,7 @@ const Servicos = () => {
                   className="servico-icone"
                   style={{ backgroundColor: grupo.cor }}
                 >
-                  <span>{grupo.icone}</span>
+                  <img src={grupo.icone} />
                 </div>
                 <h3 className='danger'>{grupo.empresa}</h3>
               </div>

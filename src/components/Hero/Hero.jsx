@@ -13,6 +13,7 @@ const Hero = () => {
             Um conglomerado de excelência, unindo tecnologia, turismo e energia
             para construir o futuro hoje. Com três empresas especializadas,
             oferecemos soluções completas e inovadoras.
+            Seremos a melhor solução para o seu negócio!
           </p>
           <div className="hero-buttons" data-aos="fade-up" data-aos-delay="600">
             <a href="#empresas" className="btn btn-primary"> Conheça Nossas Empresas</a>
