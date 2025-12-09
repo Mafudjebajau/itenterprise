@@ -119,7 +119,7 @@ const Noticias = () => {
       <div className="container">
         <div className="section-title" data-aos="fade-up">
           <h2 className='black'>Notícias em <b className="danger">Destaque</b> </h2>
-          <p style={{ color: 'black' }}>Acompanhe as últimas atualizações do grupo ITINTERPRISES</p>
+          <p>Acompanhe as últimas atualizações do grupo ITINTERPRISES</p>
         </div>
 
         <div className="noticias-content">

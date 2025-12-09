@@ -48,6 +48,8 @@ const Servicos = () => {
           <h2>Nossos <b className='danger'>Serviços</b></h2>
           <p>Excelência e qualidade em cada segmento de atuação</p>
         </div>
+
+        {/* Serviços por Empresa */}
         <div className="servicos-grid">
           {servicos.map((grupo, index) => (
             <div

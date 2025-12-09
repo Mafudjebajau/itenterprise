@@ -594,15 +594,15 @@
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  
+
   .noticias-sidebar {
     position: static;
   }
-  
+
   .carrossel-track {
     height: 400px;
   }
-  
+
   .slide-conteudo {
     flex: 0 0 50%;
   }
@@ -612,29 +612,29 @@
   .carrossel-slide {
     flex-direction: column;
   }
-  
+
   .slide-imagem {
     flex: 0 0 200px;
   }
-  
+
   .slide-conteudo {
     flex: 1;
   }
-  
+
   .carrossel-controle {
     width: 50px;
     height: 50px;
     font-size: 1.2rem;
   }
-  
+
   .controle-anterior {
     left: 1rem;
   }
-  
+
   .controle-proximo {
     right: 1rem;
   }
-  
+
   .secundarias-grid {
     grid-template-columns: 1fr;
   }
@@ -644,25 +644,25 @@
   .carrossel-track {
     height: 350px;
   }
-  
+
   .slide-conteudo {
     padding: 1.5rem;
   }
-  
+
   .slide-conteudo h3 {
     font-size: 1.3rem;
   }
-  
+
   .slide-actions {
     flex-direction: column;
     gap: 1rem;
     align-items: stretch;
   }
-  
+
   .btn-ler-mais {
     width: 100%;
   }
-  
+
   .controles-manuais {
     justify-content: center;
   }

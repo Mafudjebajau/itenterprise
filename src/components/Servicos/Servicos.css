@@ -13,6 +13,177 @@
   background: linear-gradient(90deg, var(--preto), var(--vermelho));
 }
 
+/* Área de Destaques */
+.destaques-wrapper {
+  margin-bottom: 4rem;
+  padding: 2rem 0;
+}
+
+.destaques-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.destaques-header h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--preto);
+  margin-bottom: 0.5rem;
+}
+
+.destaques-header p {
+  font-size: 1.1rem;
+  color: var(--cinza-escuro);
+}
+
+.destaques-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.destaque-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  border: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.destaque-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, var(--vermelho), var(--preto));
+}
+
+.destaque-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(229, 57, 53, 0.3);
+  border-color: var(--vermelho);
+}
+
+.destaque-badge {
+  position: absolute;
+  top: 20px;
+  right: -35px;
+  background: linear-gradient(135deg, var(--vermelho), #C62828);
+  color: var(--branco);
+  padding: 5px 40px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  transform: rotate(45deg);
+  box-shadow: 0 3px 10px rgba(229, 57, 53, 0.3);
+  letter-spacing: 1px;
+}
+
+.destaque-icone {
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.destaque-card:hover .destaque-icone {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.destaque-icone span {
+  font-size: 2.5rem;
+}
+
+.destaque-content {
+  text-align: center;
+  flex: 1;
+}
+
+.destaque-content h4 {
+  color: var(--preto);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.destaque-content p {
+  color: var(--cinza-escuro);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.destaque-footer {
+  text-align: center;
+}
+
+.btn-destaque {
+  background: linear-gradient(135deg, var(--vermelho), #C62828);
+  color: var(--branco);
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(229, 57, 53, 0.3);
+  width: 100%;
+}
+
+.btn-destaque:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(229, 57, 53, 0.4);
+  background: linear-gradient(135deg, #C62828, var(--vermelho));
+}
+
+.btn-destaque:active {
+  transform: translateY(0);
+}
+
+/* Separador */
+.servicos-divider {
+  margin: 3rem 0;
+  text-align: center;
+  position: relative;
+}
+
+.servicos-divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--cinza), transparent);
+  transform: translateY(-50%);
+}
+
+.servicos-divider span {
+  background: linear-gradient(135deg, #1f1f1fbd, #000000);
+  color: var(--branco);
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+}
+
+
 .servicos-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -166,6 +337,32 @@
 
 /* Responsividade Serviços */
 @media (max-width: 768px) {
+  .destaques-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .destaques-header h3 {
+    font-size: 1.6rem;
+  }
+
+  .destaque-card {
+    padding: 1.5rem;
+  }
+
+  .destaque-icone {
+    width: 70px;
+    height: 70px;
+  }
+
+  .destaque-icone span {
+    font-size: 2rem;
+  }
+
+  .destaque-content h4 {
+    font-size: 1.2rem;
+  }
+
   .servicos-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -204,6 +401,41 @@
 }
 
 @media (max-width: 480px) {
+  .destaques-wrapper {
+    padding: 1rem 0;
+    margin-bottom: 3rem;
+  }
+
+  .destaques-header h3 {
+    font-size: 1.4rem;
+  }
+
+  .destaques-header p {
+    font-size: 0.95rem;
+  }
+
+  .destaques-grid {
+    gap: 1rem;
+  }
+
+  .destaque-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .destaque-badge {
+    font-size: 0.65rem;
+    padding: 4px 35px;
+  }
+
+  .servicos-divider {
+    margin: 2rem 0;
+  }
+
+  .servicos-divider span {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
   .servicos-grid {
     grid-template-columns: 1fr;
   }

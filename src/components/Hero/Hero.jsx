@@ -7,7 +7,7 @@ const Hero = () => {
       <div className="container">
         <div className="hero-content1">
 
-          <h1 className='font' data-aos="fade-down" data-aos-duration="1000"><sup >IT</sup>INTERPRISES</h1>
+          <h1 className='font' data-aos="fade-down" data-aos-duration="1000"><sup >IT</sup>ENTERPRISES</h1>
           <h2 data-aos="fade-up" data-aos-delay="200">Inovação em Diversos Segmentos</h2>
           <p data-aos="fade-up" data-aos-delay="400">
             Um conglomerado de excelência, unindo tecnologia, turismo e energia
