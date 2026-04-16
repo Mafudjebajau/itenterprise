@@ -6,7 +6,7 @@ import ItTechlogo from '../../assets/logo.svg';
 const Servicos = () => {
   const servicos = [
     {
-      empresa: "ITSOFT",
+      empresa: "IT TECH SOFT",
       icone: ItTechlogo,
       cor: "#E53935",
       servicos: [
@@ -17,7 +17,7 @@ const Servicos = () => {
       ]
     },
     {
-      empresa: "IC TRAVEL",
+      empresa: "PANTHERA TRAVEL",
       icone: "✈️",
       cor: "#212121",
       servicos: [
