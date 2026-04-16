@@ -6,7 +6,7 @@ const Empresas = () => {
   const empresas = [
     {
       id: 1,
-      nome: "ITSOFT",
+      nome: "IT TECH SOFT",
       descricao: "Soluções em tecnologia e desenvolvimento de software sob medida para seu negócio.",
       icone: ItTechlogo,
       cor: "linear-gradient(135deg, #E53935, #C62828)",
@@ -14,7 +14,7 @@ const Empresas = () => {
     },
     {
       id: 2,
-      nome: "IC TRAVEL",
+      nome: "PANTHERA TRAVEL",
       descricao: "Agência de viagens especializada em experiências únicas e pacotes personalizados.",
       icone: "✈️",
       cor: "linear-gradient(135deg, #212121, #424242)",
