@@ -14,19 +14,27 @@ const Empresas = () => {
     },
     {
       id: 2,
-      nome: "PANTHERA TRAVEL",
+      nome: "PANTERA TRAVEL",
       descricao: "Agência de viagens especializada em experiências únicas e pacotes personalizados.",
       icone: "✈️",
       cor: "linear-gradient(135deg, #212121, #424242)",
       detalhes: "Pacotes nacionais e internacionais, hospedagem premium e roteiros exclusivos."
     },
-    {
+     {
       id: 3,
       nome: "MATRIX ENERGY",
       descricao: "Postos de combustível com qualidade, preço justo e atendimento diferenciado.",
       icone: "⛽",
       cor: "linear-gradient(135deg, #D32F2F, #B71C1C)",
       detalhes: "Combustíveis de alta qualidade, conveniência 24h e serviços automotivos."
+    },
+    {
+      id: 4,
+      nome: "COMAR",
+      descricao: "Agencia de pesca Comandante do Mar",
+      icone: "CM",
+      cor: "linear-gradient(135deg, #D32F22, #B71C1F)",
+      detalhes: "Frutos do mar de alta qualidade e preço."
     }
   ]
 
