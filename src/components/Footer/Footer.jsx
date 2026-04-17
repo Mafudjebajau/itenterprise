@@ -13,9 +13,10 @@ const Footer = () => {
           <div className="footer-section">
             <h4>Empresas</h4>
             <ul>
-              <li><a href="#">ITSOFT</a></li>
-              <li><a href="#">IC TRAVEL</a></li>
+              <li><a href="#">IT TECH SOFT</a></li>
+              <li><a href="#">PANTERA TRAVEL</a></li>
               <li><a href="#">MATRIX ENERGY</a></li>
+               <li><a href="#">COMAR</a></li>
             </ul>
           </div>
           <div className="footer-section">
