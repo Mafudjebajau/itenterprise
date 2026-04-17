@@ -16,7 +16,7 @@ const Footer = () => {
               <li><a href="#">IT TECH SOFT</a></li>
               <li><a href="#">PANTERA TRAVEL</a></li>
               <li><a href="#">MATRIX ENERGY</a></li>
-               <li><a href="#">COMAR</a></li>
+              <li><a href="#">COMAR</a></li>
             </ul>
           </div>
           <div className="footer-section">
@@ -29,7 +29,7 @@ const Footer = () => {
 
 
           <div className="footer-section">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d976.1587979730562!2d-15.589182933849871!3d11.860789338255977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xee6c4d602b258d1%3A0x501eb8201184e2bf!2sVC66%2BGWC%2C%20Avenida%20Cidade%20de%20Lisboa%2C%20Bissau%201234%2C%20Guin%C3%A9-Bissau!5e0!3m2!1spt-PT!2s!4v1765290791428!5m2!1spt-PT!2s" style={{ border: 0 }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d976.1587979730562!2d-15.589182933849871!3d11.860789338255977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xee6c4d602b258d1%3A0x501eb8201184e2bf!2sVC66%2BGWC%2C%20Avenida%20Cidade%20de%20Lisboa%2C%20Bissau%201234%2C%20Guin%C3%A9-Bissau!5e0!3m2!1spt-PT!2s!4v1765290791428!5m2!1spt-PT!2s" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
 

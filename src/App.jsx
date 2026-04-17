@@ -6,6 +6,7 @@ import Itsoft from './Pages/Itsoft/Itsoft';
 import Servico from './Pages/Servico/Servico';
 import Booking from './Pages/Booking/Booking';
 import Shopping from './Pages/Shopping/Shopping';
+import Starlink from './Pages/Starlink/Starlink';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -36,9 +37,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/itsoft" element={<Itsoft />} />
+        <Route path="/ittechsoft" element={<Itsoft />} />
         <Route path="/servicos/:id" element={<Servico />} />
         <Route path="/booking/:service" element={<Booking />} />
         <Route path="/shopping" element={<Shopping />} />
+        <Route path="/starlink" element={<Starlink />} />
+        <Route path="*" element={<Home />} />
       </Routes>
     </Router>
 

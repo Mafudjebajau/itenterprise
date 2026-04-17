@@ -107,8 +107,6 @@ ${dadosCliente.nome}
             servicosSelecionados.length > 0
     }
 
-    console.log(servico.imagem);
-    console.log("DETAILS")
     return (
         <>
             <HeaderItsoft />

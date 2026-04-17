@@ -38,7 +38,7 @@ const Servicos = () => {
         { nome: "Assistência Veicular", descricao: "Manutenção e reparos especializados" }
       ]
     },
-     {
+    {
       empresa: "COMAR",
       icone: "CM",
       cor: "#C62839",
@@ -46,7 +46,7 @@ const Servicos = () => {
         { nome: "Frutos de mar", descricao: "Diferentes tipos de frutos do mar." },
         { nome: "Alta qualidade", descricao: "Produtos e serviços de qualidade" },
         { nome: "Atendimento Humano", descricao: "Atendimento e cuidados especiais" },
-        
+
       ]
     }
   ]
@@ -74,7 +74,10 @@ const Servicos = () => {
                   className="servico-icone"
                   style={{ backgroundColor: grupo.cor }}
                 >
-                  <img src={grupo.icone} />
+                  {typeof grupo.icone === 'string' && (grupo.icone.startsWith('/') || grupo.icone.startsWith('http') || grupo.icone.includes('.svg') || grupo.icone.includes('.png'))
+                    ? <img src={grupo.icone} alt={grupo.empresa} />
+                    : <span style={{ fontSize: '2rem', lineHeight: 1 }}>{grupo.icone}</span>
+                  }
                 </div>
                 <h3 className='danger'>{grupo.empresa}</h3>
               </div>
@@ -93,7 +96,7 @@ const Servicos = () => {
               <div className="empresa-actions" style={{ marginTop: '10px' }}>
                 <a className="btn btn-primary" onClick={(e) => {
                   e.preventDefault();
-                  navigate("/" + grupo.empresa.toLowerCase().replace(" ", ""))
+                  navigate("/" + grupo.empresa.toLowerCase().replace(/ /g, ""))
                 }}>Saiba Mais</a>
               </div>
             </div>

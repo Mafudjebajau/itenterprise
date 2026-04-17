@@ -20,7 +20,7 @@ const Empresas = () => {
       cor: "linear-gradient(135deg, #212121, #424242)",
       detalhes: "Pacotes nacionais e internacionais, hospedagem premium e roteiros exclusivos."
     },
-     {
+    {
       id: 3,
       nome: "MATRIX ENERGY",
       descricao: "Postos de combustível com qualidade, preço justo e atendimento diferenciado.",
@@ -58,7 +58,10 @@ const Empresas = () => {
               <div
                 className="empresa-icone"
               >
-                <img src={empresa.icone} alt="" />
+                {typeof empresa.icone === 'string' && (empresa.icone.startsWith('/') || empresa.icone.startsWith('http') || empresa.icone.includes('.svg') || empresa.icone.includes('.png'))
+                  ? <img src={empresa.icone} alt={empresa.nome} />
+                  : <span style={{ fontSize: '2rem', lineHeight: 1 }}>{empresa.icone}</span>
+                }
               </div>
               <h3>{empresa.nome}</h3>
               <p className="empresa-descricao">{empresa.descricao}</p>
@@ -66,7 +69,7 @@ const Empresas = () => {
               <div className="empresa-actions">
                 <a className="btn btn-primary" onClick={(e) => {
                   e.preventDefault();
-                  navigate("/" + empresa.nome.toLowerCase().replace(" ", ""))
+                  navigate("/" + empresa.nome.toLowerCase().replace(/ /g, ""))
                 }}>Saiba Mais</a>
               </div>
             </div>

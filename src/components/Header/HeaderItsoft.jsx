@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import './HeaderItsoft.css'
-import { FaCogs, FaCog, FaHome, FaWindowClose, FaShoppingCart, FaDotCircle } from 'react-icons/fa'
-import { FaChartBar, FaPersonBooth, FaShield } from 'react-icons/fa6'
+import { FaCogs, FaHome, FaShoppingCart, FaDotCircle } from 'react-icons/fa'
+import { FaShield } from 'react-icons/fa6'
 import logoTechSoft from '../../assets/logoTechSoft.svg'
 
 const HeaderItsoft = () => {
@@ -55,17 +55,6 @@ const HeaderItsoft = () => {
     }
   }, [])
 
-  const servicos = [
-    { nome: 'Desenvolvimento de Software', anchor: '#services', icone: '💻' },
-    { nome: 'Infraestrutura de Redes TI', anchor: '#services', icone: '🌐' },
-    { nome: 'Central IP PBX Telefonia IP', anchor: '#services', icone: '📞' },
-    { nome: 'Cursos de Informática Basico ao Avançado', anchor: '#services', icone: '🎓' },
-    { nome: 'Segurança de Informação', anchor: '#services', icone: '🔒' },
-    { nome: 'Consultoria Informática', anchor: '#services', icone: '💼' },
-    { nome: 'Serviços de Segurança eletrónica', anchor: '#services', icone: '🔒' },
-    { nome: 'Comunicação Visual', anchor: '#services', icone: '📋' },
-    { nome: 'Suporte em nuvem', anchor: '#services', icone: '☁️' }
-  ]
   const navigate = useNavigate()
   const scrollToSection = (anchor) => {
     if (location.pathname !== '/itsoft') {
@@ -81,11 +70,6 @@ const HeaderItsoft = () => {
     closeMenu()
   }
 
-  const quickActions = [
-    { label: 'Ligar', icon: '📞', action: 'tel:+245 95 000 00 00' },
-    { label: 'WhatsApp', icon: '💬', action: 'https://wa.me/00245950000000' },
-    { label: 'Email', icon: '✉️', action: 'mailto:itsoft@itinterprises.com' }
-  ]
 
   return (
     <>
@@ -147,9 +131,18 @@ const HeaderItsoft = () => {
 
                 </li>
 
+                <li className="nav-dropdown">
+                  <button
+                    onClick={() => navigate('/starlink')}
+                  >
+                    <span className="nav-icon"><FaSatellite style={{ fontSize: '1.2em' }} /></span>
+                    Starlink
+                  </button>
+                </li>
+
                 <li>
                   <button onClick={() => scrollToSection('#sobre')}>
-                    <span className="nav-icon"><FaPersonBooth /></span>
+                    <span className="nav-icon">👤</span>
                     Sobre Nós
                   </button>
                 </li>
@@ -171,23 +164,7 @@ const HeaderItsoft = () => {
         </div>
 
         {/* Barra de Status */}
-        <div className="status-bar">
-          <div className="container">
-            <marquee behavior="" direction="">
-              <div className="status-content">
-                <div className="status-item">
-                  <span className="status-indicator"></span>
-                  <span className="status-icon"><FaDotCircle color='lime' /></span>
-                  <span className="status-text">Suporte Online</span>
-                  <span className="status-icon">⚡</span>
-                  <span className="status-text">Resposta em 15min</span>
-                  <span className="status-icon"><FaShield /></span>
-                  <span className="status-text">Segurança Garantida</span>
-                </div>
-              </div>
-            </marquee>
-          </div>
-        </div>
+
       </header>
 
       {/* Overlay Mobile */}
