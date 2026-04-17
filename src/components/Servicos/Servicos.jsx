@@ -17,7 +17,7 @@ const Servicos = () => {
       ]
     },
     {
-      empresa: "PANTHERA TRAVEL",
+      empresa: "PANTERA TRAVEL",
       icone: "✈️",
       cor: "#212121",
       servicos: [
@@ -36,6 +36,17 @@ const Servicos = () => {
         { nome: "Conveniência 24h", descricao: "Produtos e serviços a qualquer hora" },
         { nome: "Lava Rápido", descricao: "Limpeza completa e cuidados especiais" },
         { nome: "Assistência Veicular", descricao: "Manutenção e reparos especializados" }
+      ]
+    },
+     {
+      empresa: "COMAR",
+      icone: "CM",
+      cor: "#C62839",
+      servicos: [
+        { nome: "Frutos de mar", descricao: "Diferentes tipos de frutos do mar." },
+        { nome: "Alta qualidade", descricao: "Produtos e serviços de qualidade" },
+        { nome: "Atendimento Humano", descricao: "Atendimento e cuidados especiais" },
+        
       ]
     }
   ]
