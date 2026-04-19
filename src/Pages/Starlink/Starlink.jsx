@@ -13,7 +13,8 @@ import {
     FaHeadset,
     FaBolt,
     FaWhatsapp,
-    FaPhoneAlt
+    FaPhoneAlt,
+    FaCheck
 } from 'react-icons/fa'
 import { SiSpacex } from 'react-icons/si'
 import './Starlink.css'
@@ -29,6 +30,7 @@ const Starlink = () => {
             nome: 'Starlink Mini',
             badge: 'Mobilidade Total',
             icone: <FaSatelliteDish />,
+            imagem: 'https://images.squarespace-cdn.com/content/v1/674a5a63dcab3e30b07739fa/929dc980-a4ca-4214-a459-a2f6937f9c45/1541-3.jpg',
             cor: '#2563EB',
             descricao:
                 'A Starlink Mini redefine os padrões de conectividade móvel. Projetada para ambientes que exigem mobilidade total sem comprometer a largura de banda, esta unidade compacta integra uma antena de matriz de fase eletrónica e um router Wi-Fi num único chassis.',
@@ -45,6 +47,7 @@ const Starlink = () => {
             nome: 'Starlink Standard',
             badge: 'Mais Popular',
             icone: <FaSatellite />,
+            imagem: 'https://images.squarespace-cdn.com/content/v1/674a5a63dcab3e30b07739fa/9adc0553-981a-40a6-9e09-9a7b263b26a0/1404-starlink-standard-v4-kit-wifi-satelital-router-antena-wifi6-ip67-hasta-235-dispositivos.jpg.webp',
             cor: '#059669',
             descricao:
                 'A Starlink Standard é a solução de referência para empresas e residências que exigem banda larga sem compromissos. Concebida para instalações fixas ou semi-permanentes, oferece campo de visão alargado e hardware otimizado da constelação LEO.',
@@ -61,6 +64,7 @@ const Starlink = () => {
             nome: 'Starlink High Performance',
             badge: 'Máximo Desempenho',
             icone: <FaRocket />,
+            imagem: 'https://images.squarespace-cdn.com/content/v1/674a5a63dcab3e30b07739fa/a0542128-02ae-40c7-a22d-85cc0aab40ef/1540-1.jpg',
             cor: '#7C3AED',
             descricao:
                 'Desenvolvida para utilizadores empresariais que não podem permitir falhas na conectividade. Com antenas de maior dimensão e sensibilidade de receção superior, oferece estabilidade sem precedentes em condições extremas.',
@@ -148,20 +152,20 @@ const Starlink = () => {
                                     e remotas onde a fibra não existe.
                                 </p>
                                 <div className="sl-sobre-chips">
-                                    <span>✅ Banda Larga via Satélite</span>
-                                    <span>✅ Latência Baixa LEO</span>
-                                    <span>✅ Sem Cabos Terrestres</span>
-                                    <span>✅ SpaceX Technology</span>
+                                    <span><FaCheck /> Banda Larga via Satélite</span>
+                                    <span><FaCheck /> Latência Baixa LEO</span>
+                                    <span><FaCheck /> Sem Cabos Terrestres</span>
+                                    <span><FaCheck /> SpaceX Technology</span>
                                 </div>
                             </div>
                             <div className="sl-sobre-visual" data-aos="fade-left">
                                 <div className="sl-orbit-container">
-                                    <div className="sl-planet"><FaGlobe /></div>
+                                    <div className="sl-planet"><FaGlobe color='blue' /></div>
                                     <div className="sl-orbit">
-                                        <div className="sl-satellite"><FaSatellite /></div>
+                                        <div className="sl-satellite"><FaSatellite color='#1b1a44' /></div>
                                     </div>
                                     <div className="sl-orbit sl-orbit-2">
-                                        <div className="sl-satellite"><FaSatellite /></div>
+                                        <div className="sl-satellite"><FaSatellite color='#1b1a44' /></div>
                                     </div>
                                     <div className="sl-signal-lines">
                                         <div className="sl-signal" />
@@ -189,7 +193,10 @@ const Starlink = () => {
                             {produtos.map((p, i) => (
                                 <div key={p.id} className="sl-produto-card" data-aos="fade-up" data-aos-delay={i * 150}>
                                     <div className="sl-produto-badge" style={{ background: p.cor }}>{p.badge}</div>
-                                    <div className="sl-produto-icone" style={{ color: p.cor }}>{p.icone}</div>
+                                    <div className="sl-produto-img-container">
+                                        <img src={p.imagem} alt={p.nome} className="sl-produto-img" />
+                                        <div className="sl-produto-icone-mini" style={{ color: p.cor }}>{p.icone}</div>
+                                    </div>
                                     <h3>{p.nome}</h3>
                                     <p className="sl-produto-desc">{p.descricao}</p>
                                     <div className="sl-specs">

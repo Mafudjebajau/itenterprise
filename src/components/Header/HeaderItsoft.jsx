@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import './HeaderItsoft.css'
 import { FaCogs, FaHome, FaShoppingCart, FaDotCircle } from 'react-icons/fa'
-import { FaShield } from 'react-icons/fa6'
+import { FaShield, FaSatellite } from 'react-icons/fa6'
 import logoTechSoft from '../../assets/logoTechSoft.svg'
 
 const HeaderItsoft = () => {

@@ -29,16 +29,16 @@
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,0.9) 0%, transparent 100%),
-    radial-gradient(1px 1px at 30% 70%, rgba(255,255,255,0.7) 0%, transparent 100%),
-    radial-gradient(1px 1px at 50% 10%, rgba(255,255,255,0.8) 0%, transparent 100%),
-    radial-gradient(1px 1px at 70% 50%, rgba(255,255,255,0.6) 0%, transparent 100%),
-    radial-gradient(1px 1px at 85% 30%, rgba(255,255,255,0.9) 0%, transparent 100%),
-    radial-gradient(1px 1px at 15% 80%, rgba(255,255,255,0.7) 0%, transparent 100%),
-    radial-gradient(1px 1px at 60% 85%, rgba(255,255,255,0.5) 0%, transparent 100%),
-    radial-gradient(1px 1px at 40% 40%, rgba(255,255,255,0.8) 0%, transparent 100%),
-    radial-gradient(1px 1px at 90% 75%, rgba(255,255,255,0.6) 0%, transparent 100%),
-    radial-gradient(1px 1px at 25% 55%, rgba(255,255,255,0.9) 0%, transparent 100%);
+    radial-gradient(1px 1px at 10% 20%, rgba(255, 255, 255, 0.9) 0%, transparent 100%),
+    radial-gradient(1px 1px at 30% 70%, rgba(255, 255, 255, 0.7) 0%, transparent 100%),
+    radial-gradient(1px 1px at 50% 10%, rgba(255, 255, 255, 0.8) 0%, transparent 100%),
+    radial-gradient(1px 1px at 70% 50%, rgba(255, 255, 255, 0.6) 0%, transparent 100%),
+    radial-gradient(1px 1px at 85% 30%, rgba(255, 255, 255, 0.9) 0%, transparent 100%),
+    radial-gradient(1px 1px at 15% 80%, rgba(255, 255, 255, 0.7) 0%, transparent 100%),
+    radial-gradient(1px 1px at 60% 85%, rgba(255, 255, 255, 0.5) 0%, transparent 100%),
+    radial-gradient(1px 1px at 40% 40%, rgba(255, 255, 255, 0.8) 0%, transparent 100%),
+    radial-gradient(1px 1px at 90% 75%, rgba(255, 255, 255, 0.6) 0%, transparent 100%),
+    radial-gradient(1px 1px at 25% 55%, rgba(255, 255, 255, 0.9) 0%, transparent 100%);
 }
 
 .sl-hero-content {
@@ -76,7 +76,7 @@
   background-clip: text;
 }
 
-.sl-hero-content > p {
+.sl-hero-content>p {
   font-size: 1.15rem;
   color: #94a3b8;
   line-height: 1.7;
@@ -107,6 +107,7 @@
   transition: all 0.3s ease;
   box-shadow: 0 4px 20px rgba(37, 99, 235, 0.4);
 }
+
 .sl-btn-primary:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 28px rgba(37, 99, 235, 0.5);
@@ -127,6 +128,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
 }
+
 .sl-btn-outline:hover {
   background: rgba(147, 197, 253, 0.1);
   border-color: #93c5fd;
@@ -234,8 +236,15 @@
 }
 
 @keyframes planet-pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
 }
 
 .sl-orbit {
@@ -256,8 +265,13 @@
 }
 
 @keyframes orbit-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .sl-satellite {
@@ -280,18 +294,36 @@
   left: 50%;
   width: 2px;
   height: 60px;
-  background: linear-gradient(to bottom, rgba(37,99,235,0.8), transparent);
+  background: linear-gradient(to bottom, rgba(37, 99, 235, 0.8), transparent);
   transform-origin: top center;
   animation: signal-blink 2s ease-in-out infinite;
 }
 
-.sl-signal:nth-child(1) { transform: rotate(-20deg); animation-delay: 0s; }
-.sl-signal:nth-child(2) { transform: rotate(0deg); animation-delay: 0.3s; }
-.sl-signal:nth-child(3) { transform: rotate(20deg); animation-delay: 0.6s; }
+.sl-signal:nth-child(1) {
+  transform: rotate(-20deg);
+  animation-delay: 0s;
+}
+
+.sl-signal:nth-child(2) {
+  transform: rotate(0deg);
+  animation-delay: 0.3s;
+}
+
+.sl-signal:nth-child(3) {
+  transform: rotate(20deg);
+  animation-delay: 0.6s;
+}
 
 @keyframes signal-blink {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 1; }
+
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 1;
+  }
 }
 
 .sl-coverage-badge {
@@ -354,8 +386,40 @@
   letter-spacing: 0.05em;
 }
 
-.sl-produto-icone {
-  font-size: 3rem;
+.sl-produto-img-container {
+  width: 100%;
+  height: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  background: #f1f5f9;
+  margin-bottom: 8px;
+}
+
+.sl-produto-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+}
+
+.sl-produto-card:hover .sl-produto-img {
+  transform: scale(1.08);
+}
+
+.sl-produto-icone-mini {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  background: rgba(255, 255, 255, 0.9);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .sl-produto-card h3 {
@@ -560,8 +624,15 @@
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 .sl-cta-content h2 {
@@ -600,6 +671,7 @@
   transition: all 0.3s ease;
   box-shadow: 0 4px 16px rgba(22, 163, 74, 0.3);
 }
+
 .sl-btn-whatsapp:hover {
   transform: translateY(-2px);
   opacity: 0.9;
@@ -610,6 +682,7 @@
   .sl-produtos-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .sl-vantagens-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -620,23 +693,29 @@
     grid-template-columns: 1fr;
     gap: 40px;
   }
+
   .sl-produtos-grid {
     grid-template-columns: 1fr;
   }
+
   .sl-vantagens-grid {
     grid-template-columns: 1fr;
   }
+
   .sl-processo-steps {
     flex-direction: column;
     align-items: center;
     gap: 32px;
   }
+
   .sl-passo-arrow {
     display: none;
   }
+
   .sl-hero-stats {
     gap: 20px;
   }
+
   .sl-cta-content h2 {
     font-size: 1.8rem;
   }
