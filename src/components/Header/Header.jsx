@@ -38,7 +38,7 @@ const Header = () => {
       <div className="container">
         <div className="header-content">
           <div className="logo">
-            <h1>ITINTERPRISES</h1>
+            <h1><sup>IT</sup>ENTERPRISES</h1>
           </div>
 
           <nav className={`nav ${isMenuOpen ? 'active' : ''}`}>

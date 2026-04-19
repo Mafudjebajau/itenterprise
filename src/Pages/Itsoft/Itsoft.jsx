@@ -6,7 +6,7 @@ import HeaderItsoft from '../../components/Header/HeaderItsoft'
 import itsoftEquipe from '../../assets/it-team.webp'
 import mulherAoTelephone from "../../assets/mulheraotelephone.jpeg"
 import desenvolvimentodesoftware from "../../assets/desenvolimentodesoftware.jpg"
-import logoTechSoft from '../../assets/logoTechSoft.svg'
+import logoTechSoft from '../../assets/techsoft-logo.png'
 import techimg from '../../assets/bg-1.jpg'
 
 import ToTopButton from '../../components/Adicionais/ToTopButton'
@@ -454,7 +454,8 @@ const Itsoft = () => {
                                 <img
                                     src={itsoftEquipe}
                                     alt="Equipe TECH SOFT"
-                                    className='itsoft-equipe-img' />
+                                    className='itsoft-equipe-img'
+                                    loading="lazy" />
                                 <div className="stats-grid pt-2">
                                     <div className="stat-item">
                                         <div className="stat-number">500+</div>
@@ -543,7 +544,7 @@ const Itsoft = () => {
                             {cases.map((caseItem, index) => (
                                 <div key={index} className="case-card" data-aos="zoom-in" data-aos-delay={index * 150}>
                                     <div className="case-imagem">
-                                        <img src={caseItem.imagem} alt={caseItem.empresa} />
+                                        <img src={caseItem.imagem} alt={caseItem.empresa} loading="lazy" />
                                         <div className="case-overlay">
                                             <span className="case-empresa">{caseItem.empresa}</span>
                                         </div>

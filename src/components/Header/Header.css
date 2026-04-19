@@ -7,7 +7,7 @@
   width: 100%;
   top: 0;
   z-index: 1000;
-  transition: all 0.3s ease;
+  transition: var(--smooth-transition);
   border-bottom: 1px solid rgba(229, 57, 53, 0.1);
 }
 

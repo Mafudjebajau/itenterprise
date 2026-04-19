@@ -1,0 +1,128 @@
+.pt-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 0;
+    transition: var(--smooth-transition);
+    background: transparent;
+}
+
+.pt-header.scrolled {
+    background: rgba(10, 10, 10, 0.95);
+    padding: 12px 0;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid rgba(184, 134, 11, 0.2);
+}
+
+.pt-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pt-logo img {
+    height: 45px;
+    transition: transform 0.3s ease;
+}
+
+.pt-logo:hover img {
+    transform: scale(1.05);
+}
+
+.pt-nav-list {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.pt-nav-list li a,
+.pt-nav-list li button {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.pt-nav-list li a:hover,
+.pt-nav-list li button:hover {
+    color: #B8860B;
+}
+
+.pt-nav-cta {
+    background: linear-gradient(135deg, #B8860B, #8B4513) !important;
+    color: #fff !important;
+    padding: 10px 25px !important;
+    border-radius: 50px !important;
+    box-shadow: 0 4px 15px rgba(184, 134, 11, 0.3);
+}
+
+.pt-nav-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(184, 134, 11, 0.5) !important;
+}
+
+/* ── MOBILE ── */
+.pt-menu-toggle {
+    display: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .pt-menu-toggle {
+        display: block;
+    }
+
+    .pt-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background: #111;
+        z-index: 1001;
+        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        padding: 100px 40px;
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .pt-nav.active {
+        right: 0;
+    }
+
+    .pt-nav-list {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+    .pt-nav-list li a,
+    .pt-nav-list li button {
+        font-size: 1.2rem;
+    }
+
+    .pt-mobile-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 1000;
+        backdrop-filter: blur(5px);
+    }
+}

@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import './Empresas.css'
-import ItTechlogo from '../../assets/logo.svg';
+import techsoftLogo from '../../assets/techsoft-logo.png';
+import panteraLogo from '../../assets/pantera-logo-full.png';
 
 const Empresas = () => {
   const empresas = [
@@ -8,7 +9,7 @@ const Empresas = () => {
       id: 1,
       nome: "IT TECH SOFT",
       descricao: "Soluções em tecnologia e desenvolvimento de software sob medida para seu negócio.",
-      icone: ItTechlogo,
+      icone: techsoftLogo,
       cor: "linear-gradient(135deg, #E53935, #C62828)",
       detalhes: "Desenvolvimento de sistemas, aplicativos mobile, consultoria em TI e soluções em nuvem."
     },
@@ -16,7 +17,7 @@ const Empresas = () => {
       id: 2,
       nome: "PANTERA TRAVEL",
       descricao: "Agência de viagens especializada em experiências únicas e pacotes personalizados.",
-      icone: "✈️",
+      icone: panteraLogo,
       cor: "linear-gradient(135deg, #212121, #424242)",
       detalhes: "Pacotes nacionais e internacionais, hospedagem premium e roteiros exclusivos."
     },

@@ -42,7 +42,7 @@
 
 .hero-text h1 {
   font-size: 4rem;
-  color: #E53935;
+  color: var(--vermelho-primario);
   margin-bottom: 1rem;
   font-weight: 800;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
@@ -183,7 +183,7 @@
 .stat-number {
   font-size: 2.5rem;
   font-weight: 800;
-  color: #E53935;
+  color: var(--vermelho-primario);
   margin-bottom: 0.5rem;
 }
 
@@ -361,7 +361,8 @@
 
 .case-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(229, 57, 53, 0.15);
+  box-shadow: var(--premium-shadow);
+  border-color: var(--vermelho-primario);
 }
 
 .case-imagem {
@@ -596,14 +597,14 @@
 
 /* Botões Gerais */
 .btn-primary {
-  background: linear-gradient(135deg, #E53935, #C62828);
+  background: var(--gradient-vermelho);
   color: white;
   border: none;
   padding: 1rem 2rem;
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: var(--smooth-transition);
   box-shadow: 0 4px 15px rgba(229, 57, 53, 0.3);
 }
 

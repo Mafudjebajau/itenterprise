@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import './HeaderItsoft.css'
-import { FaCogs, FaHome, FaShoppingCart, FaDotCircle } from 'react-icons/fa'
+import { FaCogs, FaHome, FaShoppingCart, FaDotCircle, FaPlane } from 'react-icons/fa'
 import { FaShield, FaSatellite } from 'react-icons/fa6'
-import logoTechSoft from '../../assets/logoTechSoft.svg'
+import logoTechSoft from '../../assets/techsoft-logo.png'
 
 const HeaderItsoft = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -137,6 +137,15 @@ const HeaderItsoft = () => {
                   >
                     <span className="nav-icon"><FaSatellite style={{ fontSize: '1.2em' }} /></span>
                     Starlink
+                  </button>
+                </li>
+
+                <li className="nav-dropdown">
+                  <button
+                    onClick={() => navigate('/panteratravel')}
+                  >
+                    <span className="nav-icon"><FaPlane style={{ fontSize: '1.1em' }} /></span>
+                    Pantera Travel
                   </button>
                 </li>
 

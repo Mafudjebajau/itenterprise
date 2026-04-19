@@ -70,7 +70,7 @@
 }
 
 .sl-accent {
-  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  background: var(--gradient-azul);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -95,7 +95,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  background: var(--gradient-azul);
   color: #fff;
   padding: 14px 28px;
   border-radius: 10px;
@@ -104,7 +104,7 @@
   text-decoration: none;
   border: none;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: var(--smooth-transition);
   box-shadow: 0 4px 20px rgba(37, 99, 235, 0.4);
 }
 
@@ -502,12 +502,13 @@
 }
 
 .sl-vantagem-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(12px);
   border-radius: 16px;
   padding: 28px 24px;
   text-align: center;
-  transition: all 0.3s ease;
+  transition: var(--smooth-transition);
 }
 
 .sl-vantagem-card:hover {

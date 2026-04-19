@@ -24,6 +24,23 @@
   --gradient-preto: linear-gradient(135deg, var(--preto), var(--preto-claro));
   --gradient-hero: linear-gradient(135deg, var(--preto) 0%, var(--preto-claro) 100%);
   --gradient-overlay: linear-gradient(135deg, rgba(18, 18, 18, 0.9), rgba(30, 30, 30, 0.8));
+
+  /* Gold Theme (Pantera) */
+  --dourado-primario: #B8860B;
+  --dourado-claro: #FFD700;
+  --dourado-escuro: #8B4513;
+  --gradient-dourado: linear-gradient(135deg, var(--dourado-claro), var(--dourado-primario));
+
+  /* Starlink Blue Theme */
+  --azul-starlink: #2563eb;
+  --azul-starlink-escuro: #1d4ed8;
+  --gradient-azul: linear-gradient(135deg, var(--azul-starlink), #7c3aed);
+
+  /* Efeitos */
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --premium-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  --smooth-transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .black {
@@ -145,6 +162,28 @@ body {
   color: var(--branco);
   border-color: transparent;
   transform: translateY(-2px);
+}
+
+/* Glassmorphism Utility */
+.glass-effect {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+}
+
+.premium-card {
+  background: var(--bg-card);
+  border-radius: 16px;
+  border: 1px solid var(--preto-suave);
+  transition: var(--smooth-transition);
+}
+
+.premium-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--vermelho-primario);
+  box-shadow: var(--premium-shadow);
 }
 
 /* Seções */

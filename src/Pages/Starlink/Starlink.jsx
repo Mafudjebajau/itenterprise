@@ -194,7 +194,7 @@ const Starlink = () => {
                                 <div key={p.id} className="sl-produto-card" data-aos="fade-up" data-aos-delay={i * 150}>
                                     <div className="sl-produto-badge" style={{ background: p.cor }}>{p.badge}</div>
                                     <div className="sl-produto-img-container">
-                                        <img src={p.imagem} alt={p.nome} className="sl-produto-img" />
+                                        <img src={p.imagem} alt={p.nome} className="sl-produto-img" loading="lazy" />
                                         <div className="sl-produto-icone-mini" style={{ color: p.cor }}>{p.icone}</div>
                                     </div>
                                     <h3>{p.nome}</h3>
@@ -277,7 +277,7 @@ const Starlink = () => {
                                     <FaSatelliteDish style={{ marginRight: '8px' }} /> Pedir Instalação
                                 </Link>
                                 <a href="tel:+245955066969" className="sl-btn-outline"><FaPhoneAlt style={{ marginRight: '8px' }} /> Ligar Agora</a>
-                                <a href="https://wa.me/245955066969" target="_blank" rel="noreferrer" className="sl-btn-whatsapp"><FaWhatsapp style={{ marginRight: '8px' }} /> WhatsApp</a>
+                                <a href="https://wa.me/245955066969" target="_blank" rel="noopener noreferrer" className="sl-btn-whatsapp"><FaWhatsapp style={{ marginRight: '8px' }} /> WhatsApp</a>
                             </div>
                         </div>
                     </div>

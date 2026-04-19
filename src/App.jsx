@@ -7,6 +7,7 @@ import Servico from './Pages/Servico/Servico';
 import Booking from './Pages/Booking/Booking';
 import Shopping from './Pages/Shopping/Shopping';
 import Starlink from './Pages/Starlink/Starlink';
+import PanteraTravel from './Pages/PanteraTravel/PanteraTravel';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -42,6 +43,7 @@ function App() {
         <Route path="/booking/:service" element={<Booking />} />
         <Route path="/shopping" element={<Shopping />} />
         <Route path="/starlink" element={<Starlink />} />
+        <Route path="/panteratravel" element={<PanteraTravel />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </Router>
